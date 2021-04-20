@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('template_title')
     {!! trans('usersmanagement.showing-all-users') !!}
@@ -26,126 +26,210 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
+    <div class="container">
+        <div class="section-header-info">
+            <!-- SECTION PRETITLE -->
+            <p class="section-pretitle">Browse Marina's</p>
+            <!-- /SECTION PRETITLE -->
 
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-
-                            <span id="card_title">
-                                {!! trans('usersmanagement.showing-all-users') !!}
-                            </span>
-
-                            <div class="btn-group pull-right btn-group-xs">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-ellipsis-v fa-fw" aria-hidden="true"></i>
-                                    <span class="sr-only">
-                                        {!! trans('usersmanagement.users-menu-alt') !!}
-                                    </span>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="/users/create">
-                                        <i class="fa fa-fw fa-user-plus" aria-hidden="true"></i>
-                                        {!! trans('usersmanagement.buttons.create-new') !!}
-                                    </a>
-                                    <a class="dropdown-item" href="/users/deleted">
-                                        <i class="fa fa-fw fa-group" aria-hidden="true"></i>
-                                        {!! trans('usersmanagement.show-deleted-users') !!}
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-
-                        @if(config('usersmanagement.enableSearchUsers'))
-                            @include('partials.search-users-form')
-                        @endif
-
-                        <div class="table-responsive users-table">
-                            <table class="table table-striped table-sm data-table">
-                                <caption id="user_count">
-                                    {{ trans_choice('usersmanagement.users-table.caption', 1, ['userscount' => $users->count()]) }}
-                                </caption>
-                                <thead class="thead">
-                                    <tr>
-                                        <th>{!! trans('usersmanagement.users-table.id') !!}</th>
-                                        <th>{!! trans('usersmanagement.users-table.name') !!}</th>
-                                        <th class="hidden-xs">{!! trans('usersmanagement.users-table.email') !!}</th>
-                                        <th class="hidden-xs">{!! trans('usersmanagement.users-table.fname') !!}</th>
-                                        <th class="hidden-xs">{!! trans('usersmanagement.users-table.lname') !!}</th>
-                                        <th>{!! trans('usersmanagement.users-table.role') !!}</th>
-                                        <th class="hidden-sm hidden-xs hidden-md">{!! trans('usersmanagement.users-table.created') !!}</th>
-                                        <th class="hidden-sm hidden-xs hidden-md">{!! trans('usersmanagement.users-table.updated') !!}</th>
-                                        <th>{!! trans('usersmanagement.users-table.actions') !!}</th>
-                                        <th class="no-search no-sort"></th>
-                                        <th class="no-search no-sort"></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="users_table">
-                                    @foreach($users as $user)
-                                        <tr>
-                                            <td>{{$user->id}}</td>
-                                            <td>{{$user->name}}</td>
-                                            <td class="hidden-xs"><a href="mailto:{{ $user->email }}" title="email {{ $user->email }}">{{ $user->email }}</a></td>
-                                            <td class="hidden-xs">{{$user->first_name}}</td>
-                                            <td class="hidden-xs">{{$user->last_name}}</td>
-                                            <td>
-                                                @foreach ($user->roles as $user_role)
-                                                    @if ($user_role->name == 'User')
-                                                        @php $badgeClass = 'primary' @endphp
-                                                    @elseif ($user_role->name == 'Admin')
-                                                        @php $badgeClass = 'warning' @endphp
-                                                    @elseif ($user_role->name == 'Unverified')
-                                                        @php $badgeClass = 'danger' @endphp
-                                                    @else
-                                                        @php $badgeClass = 'default' @endphp
-                                                    @endif
-                                                    <span class="badge badge-{{$badgeClass}}">{{ $user_role->name }}</span>
-                                                @endforeach
-                                            </td>
-                                            <td class="hidden-sm hidden-xs hidden-md">{{$user->created_at}}</td>
-                                            <td class="hidden-sm hidden-xs hidden-md">{{$user->updated_at}}</td>
-                                            <td>
-                                                {!! Form::open(array('url' => 'users/' . $user->id, 'class' => '', 'data-toggle' => 'tooltip', 'title' => 'Delete')) !!}
-                                                    {!! Form::hidden('_method', 'DELETE') !!}
-                                                    {!! Form::button(trans('usersmanagement.buttons.delete'), array('class' => 'btn btn-danger btn-sm','type' => 'button', 'style' =>'width: 100%;' ,'data-toggle' => 'modal', 'data-target' => '#confirmDelete', 'data-title' => 'Delete User', 'data-message' => 'Are you sure you want to delete this user ?')) !!}
-                                                {!! Form::close() !!}
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-sm btn-success btn-block" href="{{ URL::to('users/' . $user->id) }}" data-toggle="tooltip" title="Show">
-                                                    {!! trans('usersmanagement.buttons.show') !!}
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-sm btn-info btn-block" href="{{ URL::to('users/' . $user->id . '/edit') }}" data-toggle="tooltip" title="Edit">
-                                                    {!! trans('usersmanagement.buttons.edit') !!}
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                                <tbody id="search_results"></tbody>
-                                @if(config('usersmanagement.enableSearchUsers'))
-                                    <tbody id="search_results"></tbody>
-                                @endif
-
-                            </table>
-
-                            @if(config('usersmanagement.enablePagination'))
-                                {{ $users->links() }}
-                            @endif
-
-                        </div>
-                    </div>
+            <!-- SECTION TITLE -->
+            <h2 class="section-title">Showing All Users <span class="highlighted">82</span></h2>
+            <!-- /SECTION TITLE -->
+          </div>
+          <div class="section-filters-bar v1 my-2">
+            <!-- SECTION FILTERS BAR ACTIONS -->
+            <div class="section-filters-bar-actions w-100 mx-auto">
+              <!-- FORM -->
+              {{-- <form class="form">
+                <!-- FORM INPUT -->
+                <div class="form-input small with-button">
+                  <label for="friends-search">Search Friends</label>
+                  <input type="text" id="friends-search" name="friends_search">
+                  <!-- BUTTON -->
+                  <button class="button primary">
+                    <!-- ICON MAGNIFYING GLASS -->
+                    <svg class="icon-magnifying-glass">
+                      <use xlink:href="#svg-magnifying-glass"></use>
+                    </svg>
+                    <!-- /ICON MAGNIFYING GLASS -->
+                  </button>
+                  <!-- /BUTTON -->
                 </div>
-            </div>
-        </div>
-    </div>
+                <!-- /FORM INPUT -->
 
+                <!-- FORM SELECT -->
+
+                <!-- /FORM SELECT -->
+              </form> --}}
+              <form class="form ">
+                <!-- FORM INPUT -->
+                <div class="form-input small with-button">
+                  <label for="friends-search">Search Friends</label>
+                  <input type="text" id="friends-search" name="friends_search">
+                  <!-- BUTTON -->
+                  <button class="button primary">
+                    <!-- ICON MAGNIFYING GLASS -->
+                    <svg class="icon-magnifying-glass">
+                      <use xlink:href="#svg-magnifying-glass"></use>
+                    </svg>
+                    <!-- /ICON MAGNIFYING GLASS -->
+                  </button>
+                  <!-- /BUTTON -->
+                </div>
+                <!-- /FORM INPUT -->
+
+            </form>
+              <!-- /FORM -->
+            </div>
+            <!-- /SECTION FILTERS BAR ACTIONS -->
+
+            <!-- SECTION FILTERS BAR ACTIONS -->
+            <!-- /SECTION FILTERS BAR ACTIONS -->
+          </div>
+
+        <div class="grid">
+            <!-- USER PREVIEW -->
+            @foreach($users as $user)
+            <div class="user-preview landscape">
+              <!-- USER PREVIEW INFO -->
+
+              <div class="user-preview-info" id="users_table">
+                <!-- USER SHORT DESCRIPTION -->
+                <div class="user-stats">
+                    <!-- USER STAT -->
+                    <div class="user-stat">
+                      <!-- USER STAT TITLE -->
+                      <p class="user-stat-title">ID</p>
+                      <!-- /USER STAT TITLE -->
+
+                      <!-- USER STAT TEXT -->
+                      <p class="user-stat-text">{{$user->id}}</p>
+                      <!-- /USER STAT TEXT -->
+                    </div>
+                    <!-- /USER STAT -->
+                  </div>
+                <div class="user-short-description landscape tiny">
+
+                  <!-- USER SHORT DESCRIPTION TITLE -->
+                  <p class="user-short-description-title"><a href="group-timeline.html">Username</a></p>
+                  <!-- /USER SHORT DESCRIPTION TITLE -->
+
+                  <!-- USER SHORT DESCRIPTION TEXT -->
+                  <p class="user-short-description-text">{{$user->name}}</p>
+                  <!-- /USER SHORT DESCRIPTION TEXT -->
+                </div>
+                <!-- /USER SHORT DESCRIPTION -->
+                <div class="user-short-description landscape tiny">
+
+                    <!-- USER SHORT DESCRIPTION TITLE -->
+                    <p class="user-short-description-title"><a href="group-timeline.html">Email</a></p>
+                    <!-- /USER SHORT DESCRIPTION TITLE -->
+
+                    <!-- USER SHORT DESCRIPTION TEXT -->
+                    <p class="user-short-description-text">{{ $user->email }}</p>
+                    <!-- /USER SHORT DESCRIPTION TEXT -->
+                  </div>
+                <!-- USER STATS -->
+                <div class="user-stats">
+                  <!-- USER STAT -->
+                  <div class="user-stat">
+                    <!-- USER STAT TITLE -->
+                    <p class="user-stat-title">FirstName</p>
+                    <!-- /USER STAT TITLE -->
+
+                    <!-- USER STAT TEXT -->
+                    <p class="user-stat-text">{{$user->first_name}}</p>
+                    <!-- /USER STAT TEXT -->
+                  </div>
+                  <!-- /USER STAT -->
+                  <div class="user-stat">
+                    <!-- USER STAT TITLE -->
+                    <p class="user-stat-title">LastName</p>
+                    <!-- /USER STAT TITLE -->
+
+                    <!-- USER STAT TEXT -->
+                    <p class="user-stat-text">{{$user->last_name}}</p>
+                    <!-- /USER STAT TEXT -->
+                  </div>
+                  <!-- USER STAT -->
+                  <div class="user-stat">
+                    <!-- USER STAT TITLE -->
+                    <p class="user-stat-title">Role</p>
+
+                    <!-- /USER STAT TITLE -->
+
+                    <!-- USER STAT TEXT -->
+                    <p class="user-stat-text">
+                        @foreach ($user->roles as $user_role)
+                        @if ($user_role->name == 'User')
+                            @php $badgeClass = 'primary' @endphp
+                        @elseif ($user_role->name == 'Admin')
+                            @php $badgeClass = 'warning' @endphp
+                        @elseif ($user_role->name == 'Unverified')
+                            @php $badgeClass = 'danger' @endphp
+                        @else
+                            @php $badgeClass = 'default' @endphp
+                        @endif
+                        <span class="badge badge-{{$badgeClass}}">{{ $user_role->name }}</span>
+                        @endforeach
+                    </p>
+                    <!-- /USER STAT TEXT -->
+                  </div>
+                  <!-- /USER STAT -->
+
+                  <!-- USER STAT -->
+
+                  <div class="user-stat">
+                    <!-- USER STAT TITLE -->
+                    <p class="user-stat-title">Create</p>
+                    <!-- /USER STAT TITLE -->
+
+                    <!-- USER STAT TEXT -->
+                    <p class="user-stat-text">{{$user->created_at}}</p>
+                    <!-- /USER STAT TEXT -->
+                  </div>
+                  <div class="user-stat">
+                    <!-- USER STAT TITLE -->
+                    <p class="user-stat-title">Updte</p>
+                    <!-- /USER STAT TITLE -->
+
+                    <!-- USER STAT TEXT -->
+                    <p class="user-stat-text">{{$user->created_at}}</p>
+                    <!-- /USER STAT TEXT -->
+                  </div>
+                  <!-- /USER STAT -->
+                </div>
+                <div class="user-preview-actions">
+                    <!-- BUTTON -->
+                    <button class="button secondary">
+                        <a href="{{ URL::to('users/' . $user->id) }}" data-toggle="tooltip" title="Show">
+                            {!! trans('usersmanagement.buttons.show') !!}
+                        </a>
+                    </button>
+                    <!-- /BUTTON -->
+
+                    <!-- BUTTON -->
+                    <button class="button primary">
+                        <a href="{{ URL::to('users/' . $user->id . '/edit') }}" data-toggle="tooltip" title="Edit">
+                            {!! trans('usersmanagement.buttons.edit') !!}
+                        </a>
+                    </button>
+                    <button class="button danger" data-target="#confirmDelete" data-messages="Are you sure you want to delete this user ?">
+                        <a href="{{ URL::to('users/' . $user->id) }}" data-toggle="tooltip" title="'Delete'))   ">
+                            {!! trans('usersmanagement.buttons.delete') !!}
+                        </a>
+                    </button>
+                    <!-- /BUTTON -->
+                </div>
+                <!-- /USER PREVIEW ACTIONS -->
+              </div>
+
+
+              <!-- /USER PREVIEW INFO -->
+            </div>
+            @endforeach
+          </div>
+    </div>
     @include('modals.modal-delete')
 
 @endsection
