@@ -9,8 +9,8 @@ return [
     |
     */
 
-    'denied'          => 'Vous n\'avez pas partagé les données du réseau social avec notre site Internet.',
-    'noProvider'      => 'Aucun fournisseur social connu.',
-    'registerSuccess' => 'Vous êtes bien enregistré, merci.',
+    'denied'          => 'You did not share your profile data with our social app. ',
+    'noProvider'      => 'No such provider. ',
+    'registerSuccess' => 'You have successfully registered! ',
 
 ];

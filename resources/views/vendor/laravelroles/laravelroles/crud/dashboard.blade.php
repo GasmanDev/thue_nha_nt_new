@@ -51,7 +51,7 @@
 
     @include('laravelroles::laravelroles.partials.flash-messages')
 
-    <div class="container-fluid">
+    <div class="w-100 my-4">
         <div class="row">
             @include('laravelroles::laravelroles.cards.roles-card', ['items' => $sortedRolesWithPermissionsAndUsers])
             @include('laravelroles::laravelroles.cards.permissions-card', ['items' => $sortedPermissionsRolesUsers])
