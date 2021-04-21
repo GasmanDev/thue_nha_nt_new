@@ -17,7 +17,7 @@ class SocialController extends Controller
 {
     use ActivationTrait;
 
-    private $redirectSuccessLogin = 'home';
+    private $redirectSuccessLogin = '/home';
 
     /**
      * Gets the social redirect.

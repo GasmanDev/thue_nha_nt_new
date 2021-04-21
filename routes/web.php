@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 // Homepage Route
 Route::group(['middleware' => ['web', 'checkblocked']], function () {
-    Route::get('/', 'App\Http\Controllers\WelcomeController@welcome')->name('welcome');
+    Route::get('/', 'App\Http\Controllers\WelcomeController@welcome')->name('home');
     Route::get('/terms', 'App\Http\Controllers\TermsController@terms')->name('terms');
 });
 
@@ -54,7 +54,7 @@ Route::group(['middleware' => ['auth', 'activated', 'activity', 'checkblocked']]
 Route::group(['middleware' => ['auth', 'activated', 'activity', 'twostep', 'checkblocked']], function () {
 
     //  Homepage Route - Redirect based on user role is in controller.
-    Route::get('/home', ['as' => 'public.home',   'uses' => 'App\Http\Controllers\UserController@index']);
+    Route::get('/home', ['as' => 'dashboard',   'uses' => 'App\Http\Controllers\UserController@index']);
 
     // Show users profile - viewable by other users.
     Route::get('profile/{username}', [

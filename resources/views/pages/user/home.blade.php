@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
+
+@section('sidebar_active', 'none')
 
 @section('template_title')
     {{ Auth::user()->name }}'s' Homepage

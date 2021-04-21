@@ -111,17 +111,17 @@
         <!-- HEADER BRAND -->
         <div class="header-brand">
             <!-- LOGO -->
-            <div class="logo">
+            <a href="{{ route('dashboard') }}" class="logo">
                 <!-- ICON LOGO VIKINGER -->
                 <svg class="icon-logo-vikinger small">
                     <use xlink:href="#svg-logo-vikinger"></use>
                 </svg>
                 <!-- /ICON LOGO VIKINGER -->
-            </div>
+            </a>
             <!-- /LOGO -->
 
             <!-- HEADER BRAND TEXT -->
-            <h1 class="header-brand-text">Vikinger</h1>
+            <h1 class="header-brand-text">GoHome</h1>
             <!-- /HEADER BRAND TEXT -->
         </div>
         <!-- /HEADER BRAND -->
@@ -167,7 +167,7 @@
                 <!-- MENU MAIN ITEM -->
                 <li class="menu-main-item">
                     <!-- MENU MAIN ITEM LINK -->
-                    <a class="menu-main-item-link" href="{{ url('/home') }}">Home</a>
+                    <a class="menu-main-item-link" href="{{ route('home') }}">{{ trans('common.home') }}</a>
                     <!-- /MENU MAIN ITEM LINK -->
                 </li>
                 <!-- /MENU MAIN ITEM -->
@@ -179,96 +179,97 @@
 
     <!-- /HEADER ACTIONS -->
     <div class="flex-fill"></div>
+    <div class="action-item-wrap">
+        <!-- ACTION ITEM -->
+        <div class="action-item dark header-settings-dropdown-trigger">
+            <!-- ACTION ITEM ICON -->
+            <svg class="action-item-icon icon-settings">
+                <use xlink:href="#svg-settings"></use>
+            </svg>
+            <!-- /ACTION ITEM ICON -->
+        </div>
+        <!-- /ACTION ITEM -->
 
+        <!-- DROPDOWN NAVIGATION -->
+        <div class="dropdown-navigation header-settings-dropdown">
+            <!-- DROPDOWN NAVIGATION CATEGORY -->
+            <p class="dropdown-navigation-category">Administrator</p>
+            <!-- /DROPDOWN NAVIGATION CATEGORY -->
+
+            <!-- DROPDOWN NAVIGATION LINK -->
+            <a class="dropdown-navigation-link {{ Request::is('roles') || Request::is('permissions') ? 'active' : null }}"
+                href="{{ route('laravelroles::roles.index') }}">
+                {!! trans('titles.laravelroles') !!}
+            </a>
+            <!-- /DROPDOWN NAVIGATION LINK -->
+
+            <!-- DROPDOWN NAVIGATION LINK -->
+            <a class="dropdown-navigation-link {{ Request::is('users', 'users/' . Auth::user()->id, 'users/' . Auth::user()->id . '/edit') ? 'active' : null }}"
+                href="{{ url('/users') }}">
+                {!! trans('titles.adminUserList') !!}
+            </a>
+            <!-- /DROPDOWN NAVIGATION LINK -->
+
+            <!-- DROPDOWN NAVIGATION LINK -->
+            <a class="dropdown-navigation-link {{ Request::is('users/create') ? 'active' : null }}"
+                href="{{ url('/users/create') }}">
+                {!! trans('titles.adminNewUser') !!}
+            </a>
+            <!-- /DROPDOWN NAVIGATION LINK -->
+            <div class="dropdown-divider"></div>
+            <!-- DROPDOWN NAVIGATION CATEGORY -->
+            <p class="dropdown-navigation-category">Log Tools</p>
+            <!-- /DROPDOWN NAVIGATION CATEGORY -->
+
+             <!-- DROPDOWN NAVIGATION LINK -->
+             <a class="dropdown-navigation-link  {{ Request::is('logs') ? 'active' : null }}"
+             href="{{ url('/logs') }}">
+             {!! trans('titles.adminLogs') !!}
+         </a>
+         <!-- /DROPDOWN NAVIGATION LINK -->
+
+            <!-- DROPDOWN NAVIGATION LINK -->
+            <a class="dropdown-navigation-link {{ Request::is('activity') ? 'active' : null }}"
+                href="{{ url('/activity') }}">
+                {!! trans('titles.adminActivity') !!}
+            </a>
+            <!-- /DROPDOWN NAVIGATION LINK -->
+
+            <!-- DROPDOWN NAVIGATION LINK -->
+            <a class="dropdown-navigation-link {{ Request::is('phpinfo') ? 'active' : null }}"
+                href="{{ url('/phpinfo') }}">
+                {!! trans('titles.adminPHP') !!}
+            </a>
+            <!-- /DROPDOWN NAVIGATION LINK -->
+
+            <!-- DROPDOWN NAVIGATION LINK -->
+            <a class="dropdown-navigation-link {{ Request::is('routes') ? 'active' : null }}"
+                href="{{ url('/routes') }}">
+                {!! trans('titles.adminRoutes') !!}
+            </a>
+
+
+            <!-- DROPDOWN NAVIGATION LINK -->
+            <a class="dropdown-navigation-link {{ Request::is('active-users') ? 'active' : null }}"
+                href="{{ url('/active-users') }}">
+                {!! trans('titles.activeUsers') !!}
+            </a>
+            <!-- /DROPDOWN NAVIGATION LINK -->
+
+            <!-- DROPDOWN NAVIGATION LINK -->
+            <a class="dropdown-navigation-link {{ Request::is('blocker') ? 'active' : null }}"
+                href="{{ route('laravelblocker::blocker.index') }}">
+                {!! trans('titles.laravelBlocker') !!}
+            </a>
+            <!-- /DROPDOWN NAVIGATION BUTTON -->
+        </div>
+        <!-- /DROPDOWN NAVIGATION -->
+    </div>
     <!-- HEADER ACTIONS -->
     <div class="header-actions">
         <!-- ACTION LIST -->
         <div class="action-list dark">
-            <div class="action-list-item-wrap">
-                <!-- ACTION ITEM -->
-                <div class="action-list-item dark header-settings-dropdown-trigger">
-                    <!-- ACTION ITEM ICON -->
-                    <svg class="action-item-icon icon-settings">
-                        <use xlink:href="#svg-settings"></use>
-                    </svg>
-                    <!-- /ACTION ITEM ICON -->
-                </div>
-                <!-- /ACTION ITEM -->
-
-                <!-- DROPDOWN NAVIGATION -->
-                <div class="dropdown-navigation header-settings-dropdown">
-                    <div class="dropdown-divider"></div>
-                    <!-- /DROPDOWN NAVIGATION LINK -->
-
-                    <!-- DROPDOWN NAVIGATION LINK -->
-                    <a class="dropdown-navigation-link {{ Request::is('roles') || Request::is('permissions') ? 'active' : null }}"
-                        href="{{ route('laravelroles::roles.index') }}">
-                        {!! trans('titles.laravelroles') !!}
-                    </a>
-                    <!-- /DROPDOWN NAVIGATION LINK -->
-
-                    <!-- DROPDOWN NAVIGATION LINK -->
-                    <a class="dropdown-navigation-link {{ Request::is('users', 'users/' . Auth::user()->id, 'users/' . Auth::user()->id . '/edit') ? 'active' : null }}"
-                        href="{{ url('/users') }}">
-                        {!! trans('titles.adminUserList') !!}
-                    </a>
-                    <!-- /DROPDOWN NAVIGATION LINK -->
-
-                    <!-- DROPDOWN NAVIGATION LINK -->
-                    <a class="dropdown-navigation-link {{ Request::is('users/create') ? 'active' : null }}"
-                        href="{{ url('/users/create') }}">
-                        {!! trans('titles.adminNewUser') !!}
-                    </a>
-                    <!-- /DROPDOWN NAVIGATION LINK -->
-
-                    <!-- DROPDOWN NAVIGATION LINK -->
-                    <a class="dropdown-navigation-link  {{ Request::is('logs') ? 'active' : null }}"
-                        href="{{ url('/logs') }}">
-                        {!! trans('titles.adminLogs') !!}
-                    </a>
-                    <!-- /DROPDOWN NAVIGATION LINK -->
-
-                    <!-- DROPDOWN NAVIGATION CATEGORY -->
-                    <p class="dropdown-navigation-category">Account</p>
-                    <!-- /DROPDOWN NAVIGATION CATEGORY -->
-
-                    <!-- DROPDOWN NAVIGATION LINK -->
-                    <a class="dropdown-navigation-link {{ Request::is('activity') ? 'active' : null }}"
-                        href="{{ url('/activity') }}">
-                        {!! trans('titles.adminActivity') !!}
-                    </a>
-                    <!-- /DROPDOWN NAVIGATION LINK -->
-
-                    <!-- DROPDOWN NAVIGATION LINK -->
-                    <a class="dropdown-navigation-link {{ Request::is('phpinfo') ? 'active' : null }}"
-                        href="{{ url('/phpinfo') }}">
-                        {!! trans('titles.adminPHP') !!}
-                    </a>
-                    <!-- /DROPDOWN NAVIGATION LINK -->
-
-                    <!-- DROPDOWN NAVIGATION LINK -->
-                    <a class="dropdown-navigation-link {{ Request::is('routes') ? 'active' : null }}"
-                        href="{{ url('/routes') }}">
-                        {!! trans('titles.adminRoutes') !!}
-                    </a>
-
-
-                    <!-- DROPDOWN NAVIGATION LINK -->
-                    <a class="dropdown-navigation-link {{ Request::is('active-users') ? 'active' : null }}"
-                        href="{{ url('/active-users') }}">
-                        {!! trans('titles.activeUsers') !!}
-                    </a>
-                    <!-- /DROPDOWN NAVIGATION LINK -->
-
-                    <!-- DROPDOWN NAVIGATION LINK -->
-                    <a class="dropdown-navigation-link {{ Request::is('blocker') ? 'active' : null }}"
-                        href="{{ route('laravelblocker::blocker.index') }}">
-                        {!! trans('titles.laravelBlocker') !!}
-                    </a>
-                    <!-- /DROPDOWN NAVIGATION BUTTON -->
-                </div>
-                <!-- /DROPDOWN NAVIGATION -->
-            </div>
+            
 
             <!-- ACTION LIST ITEM WRAP -->
             <div class="action-list-item-wrap">
@@ -620,7 +621,7 @@
                     <div class="user-status">
                         <p class="user-status-title">
                             <span class="bold">
-                                Hi
+                                {{ trans('common.hi') }}
                                 {{ Auth::user()->name }}
                             </span>
                         </p>
@@ -630,7 +631,7 @@
                 <!-- /DROPDOWN NAVIGATION HEADER -->
 
                 <!-- DROPDOWN NAVIGATION CATEGORY -->
-                <p class="dropdown-navigation-category">My Profile</p>
+                <p class="dropdown-navigation-category">{{ trans('common.myProfile') }}</p>
                 <!-- /DROPDOWN NAVIGATION CATEGORY -->
 
                 <!-- DROPDOWN NAVIGATION LINK -->
@@ -642,65 +643,10 @@
                 <div class="dropdown-divider"></div>
                 <!-- /DROPDOWN NAVIGATION LINK -->
 
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-profile-social.html">Social &amp; Stream</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-profile-notifications.html">Notifications</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-profile-messages.html">Messages</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-profile-requests.html">Friend Requests</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-                <!-- DROPDOWN NAVIGATION CATEGORY -->
-                <p class="dropdown-navigation-category">Account</p>
-                <!-- /DROPDOWN NAVIGATION CATEGORY -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-account-info.html">Account Info</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-account-password.html">Change Password</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-account-settings.html">General Settings</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-
-
-                <!-- DROPDOWN NAVIGATION CATEGORY -->
-                <p class="dropdown-navigation-category">My Store</p>
-                <!-- /DROPDOWN NAVIGATION CATEGORY -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-store-account.html">My Account <span
-                        class="highlighted">$250,32</span></a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-store-statement.html">Sales Statement</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-store-items.html">Manage Items</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
-                <!-- DROPDOWN NAVIGATION LINK -->
-                <a class="dropdown-navigation-link" href="hub-store-downloads.html">Downloads</a>
-                <!-- /DROPDOWN NAVIGATION LINK -->
-
                 <!-- DROPDOWN NAVIGATION BUTTON -->
                 <a class="dropdown-navigation-button button small secondary" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
+                    {{ trans('titles.logout') }}
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf

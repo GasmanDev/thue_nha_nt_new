@@ -36,4 +36,6 @@ return [
     'laravelBlocker'    => 'Blocker',
 
     'laravelroles'      => 'Roles Administration',
+
+    'manage'            => 'Manage',
 ];

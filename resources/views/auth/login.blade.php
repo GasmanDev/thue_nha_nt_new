@@ -14,7 +14,7 @@
                             <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
@@ -72,7 +72,7 @@
     </div>
 </div>
 @endsection --}}
-@extends('layouts.admin_login')
+@extends('layouts.auth')
 @section('content')
 <div class="form-box login-register-form-element">
     <!-- FORM BOX DECORATION -->
@@ -92,7 +92,7 @@
           <!-- FORM INPUT -->
           <div class="form-input">
             <label for="login-username">Username or Email</label>
-            <input type="text" id="login-username" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+            <input type="text" id="login-username" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" required>
 
             @if ($errors->has('email'))
                 <span class="invalid-feedback">
@@ -266,7 +266,7 @@
           <!-- FORM INPUT -->
           <div class="form-input">
             <label for="register-username">User name</label>
-            <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+            <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required>
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -283,7 +283,7 @@
           <!-- FORM INPUT -->
           <div class="form-input">
             <label for="register-username">First name</label>
-            <input id="first_name" type="text" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" value="{{ old('first_name') }}" required autofocus>
+            <input id="first_name" type="text" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" value="{{ old('first_name') }}" required>
 
                                 @if ($errors->has('first_name'))
                                     <span class="invalid-feedback">
@@ -301,7 +301,7 @@
           <!-- FORM INPUT -->
           <div class="form-input">
             <label for="register-username">Last name</label>
-            <input id="last_name" type="text" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" value="{{ old('last_name') }}" required autofocus>
+            <input id="last_name" type="text" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" value="{{ old('last_name') }}" required>
 
             @if ($errors->has('last_name'))
                 <span class="invalid-feedback">
