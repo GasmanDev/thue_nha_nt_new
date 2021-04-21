@@ -81,6 +81,968 @@
             </div>
         </div>
     </div>
+    <div class="table-wrap" data-simplebar>
+        <!-- TABLE -->
+        <div class="table table-sales">
+          <!-- TABLE HEADER -->
+          <div class="table-header">
+            <!-- TABLE HEADER COLUMN -->
+            <div class="table-header-column">
+              <!-- TABLE HEADER TITLE -->
+              <p class="table-header-title">Date</p>
+              <!-- /TABLE HEADER TITLE -->
+            </div>
+            <!-- /TABLE HEADER COLUMN -->
+
+            <!-- TABLE HEADER COLUMN -->
+            <div class="table-header-column padded-left">
+              <!-- TABLE HEADER TITLE -->
+              <p class="table-header-title">Item</p>
+              <!-- /TABLE HEADER TITLE -->
+            </div>
+            <!-- /TABLE HEADER COLUMN -->
+
+            <!-- TABLE HEADER COLUMN -->
+            <div class="table-header-column centered padded">
+              <!-- TABLE HEADER TITLE -->
+              <p class="table-header-title">Type</p>
+              <!-- /TABLE HEADER TITLE -->
+            </div>
+            <!-- /TABLE HEADER COLUMN -->
+
+            <!-- TABLE HEADER COLUMN -->
+            <div class="table-header-column centered padded">
+              <!-- TABLE HEADER TITLE -->
+              <p class="table-header-title">Code</p>
+              <!-- /TABLE HEADER TITLE -->
+            </div>
+            <!-- /TABLE HEADER COLUMN -->
+
+            <!-- TABLE HEADER COLUMN -->
+            <div class="table-header-column centered padded">
+              <!-- TABLE HEADER TITLE -->
+              <p class="table-header-title">Price</p>
+              <!-- /TABLE HEADER TITLE -->
+            </div>
+            <!-- /TABLE HEADER COLUMN -->
+
+            <!-- TABLE HEADER COLUMN -->
+            <div class="table-header-column centered padded">
+              <!-- TABLE HEADER TITLE -->
+              <p class="table-header-title">Cut</p>
+              <!-- /TABLE HEADER TITLE -->
+            </div>
+            <!-- /TABLE HEADER COLUMN -->
+
+            <!-- TABLE HEADER COLUMN -->
+            <div class="table-header-column centered padded">
+              <!-- TABLE HEADER TITLE -->
+              <p class="table-header-title">Earning</p>
+              <!-- /TABLE HEADER TITLE -->
+            </div>
+            <!-- /TABLE HEADER COLUMN -->
+
+            <!-- TABLE HEADER COLUMN -->
+            <div class="table-header-column padded-left"></div>
+            <!-- /TABLE HEADER COLUMN -->
+          </div>
+          <!-- /TABLE HEADER -->
+
+          <!-- TABLE BODY -->
+          <div class="table-body same-color-rows">
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 15th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Pixel Diamond Gaming Magazine</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK1287</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$26</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$13</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 15th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Twitch Stream UI Pack</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK1364</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$12</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$6</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 14th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Pixel Diamond Gaming Magazine</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK7638</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$26</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$13</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 14th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Twitch Stream UI Pack</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK7285</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$12</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$6</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 14th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Twitch Stream UI Pack</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK9673</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$12</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$6</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 12th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Gaming Coin Badges Pack</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Purchase</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK2589</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$6</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">-</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">-$6</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap negative">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-minus-small">
+                    <use xlink:href="#svg-minus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 9th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">People Illustrations Pack 01</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Purchase</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK3146</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$5</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">-</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">-$5</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap negative">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-minus-small">
+                    <use xlink:href="#svg-minus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 9th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Pixel Diamond Gaming Magazine</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK4577</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$26</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$13</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 9th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Emerald Dragon Digital Marketplace</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK6379</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$24</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$12</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 8th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Pixel Diamond Gaming Magazine</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK9932</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$26</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$13</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 5th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Twitch Stream UI Pack</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK1274</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$12</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$6</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+
+            <!-- TABLE ROW -->
+            <div class="table-row micro">
+              <!-- TABLE COLUMN -->
+              <div class="table-column">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">Nov 4th, 2019</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- TABLE LINK -->
+                <a class="table-link" href="marketplace-product.html"><span class="highlighted">Emerald Dragon Digital Marketplace</span></a>
+                <!-- /TABLE LINK -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">Sale</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">VK3345</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$24</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TEXT -->
+                <p class="table-text"><span class="light">50%</span></p>
+                <!-- /TABLE TEXT -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column centered padded">
+                <!-- TABLE TITLE -->
+                <p class="table-title">$12</p>
+                <!-- /TABLE TITLE -->
+              </div>
+              <!-- /TABLE COLUMN -->
+
+              <!-- TABLE COLUMN -->
+              <div class="table-column padded-left">
+                <!-- PERCENTAGE DIFF ICON WRAP -->
+                <div class="percentage-diff-icon-wrap positive">
+                  <!-- PERCENTAGE DIFF ICON -->
+                  <svg class="percentage-diff-icon icon-plus-small">
+                    <use xlink:href="#svg-plus-small"></use>
+                  </svg>
+                  <!-- /PERCENTAGE DIFF ICON -->
+                </div>
+                <!-- /PERCENTAGE DIFF ICON WRAP -->
+              </div>
+              <!-- /TABLE COLUMN -->
+            </div>
+            <!-- /TABLE ROW -->
+          </div>
+          <!-- /TABLE BODY -->
+        </div>
+        <!-- /TABLE -->
+      </div>
+      <!-- /TABLE
 
     @include('laravelblocker::modals.confirm-modal',[
         'formTrigger' => 'confirmDelete',
