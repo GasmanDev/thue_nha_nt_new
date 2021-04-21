@@ -167,7 +167,7 @@
           <!-- MENU MAIN ITEM -->
           <li class="menu-main-item">
             <!-- MENU MAIN ITEM LINK -->
-            <a class="menu-main-item-link" href="#">Home</a>
+            <a class="menu-main-item-link" href="{{ url('/home') }}">Home</a>
             <!-- /MENU MAIN ITEM LINK -->
           </li>
           <!-- /MENU MAIN ITEM -->
@@ -188,101 +188,89 @@
           </li>
           <!-- /MENU MAIN ITEM -->
 
-          <!-- MENU MAIN ITEM -->
 
-          <li class="menu-main-item">
-            <!-- MENU MAIN ITEM LINK -->
-              <a class="menu-main-item-link" href="#">Admin</a>
-            <!-- /MENU MAIN ITEM LINK -->
-
-            <!-- MENU MAIN -->
-
-            <ul class="menu-main">
-              <!-- MENU MAIN ITEM -->
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                {{-- <a class="menu-main-item-link" href="#">About Us</a> --}}
-                <a class="menu-main-item-link {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ route('laravelroles::roles.index') }}">
-                    {!! trans('titles.laravelroles') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link {{ Request::is('users', 'users/' . Auth::user()->id, 'users/' . Auth::user()->id . '/edit') ? 'active' : null }}" href="{{ url('/users') }}">
-                    {!! trans('titles.adminUserList') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link {{ Request::is('users/create') ? 'active' : null }}" href="{{ url('/users/create') }}">
-                    {!! trans('titles.adminNewUser') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link  {{ Request::is('themes','themes/create') ? 'active' : null }}" href="{{ url('/themes') }}">
-                    {!! trans('titles.adminThemesList') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link  {{ Request::is('logs') ? 'active' : null }}" href="{{ url('/logs') }}">
-                    {!! trans('titles.adminLogs') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link {{ Request::is('activity') ? 'active' : null }}" href="{{ url('/activity') }}">
-                    {!! trans('titles.adminActivity') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link {{ Request::is('phpinfo') ? 'active' : null }}" href="{{ url('/phpinfo') }}">
-                    {!! trans('titles.adminPHP') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link {{ Request::is('routes') ? 'active' : null }}" href="{{ url('/routes') }}">
-                    {!! trans('titles.adminRoutes') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link {{ Request::is('active-users') ? 'active' : null }}" href="{{ url('/active-users') }}">
-                    {!! trans('titles.activeUsers') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link {{ Request::is('active-users') ? 'active' : null }}" href="{{ url('/active-users') }}">
-                    {!! trans('titles.activeUsers') !!}
-                </a>
-                <a class="menu-main-item-link {{ Request::is('blocker') ? 'active' : null }}" href="{{ route('laravelblocker::blocker.index') }}">
-                    {!! trans('titles.laravelBlocker') !!}
-                </a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <!-- /MENU MAIN ITEM -->
-            </ul>
-            <!-- /MENU MAIN -->
-          </li>
-          <!-- /MENU MAIN ITEM -->
         </ul>
         <!-- /MENU MAIN -->
       </nav>
       <!-- /NAVIGATION -->
     </div>
+    <div class="action-item-wrap">
+        <!-- ACTION ITEM -->
+
+        <div class="action-item dark header-settings-dropdown-trigger">
+          <!-- ACTION ITEM ICON -->
+          <svg class="action-item-icon icon-members">
+            <use xlink:href="#svg-members"></use>
+          </svg>
+          <!-- /ACTION ITEM ICON -->
+        </div>
+        <!-- /ACTION ITEM -->
+
+        <!-- DROPDOWN NAVIGATION -->
+        <div class="dropdown-navigation header-settings-dropdown">
+        <div class="dropdown-divider"></div>
+          <!-- /DROPDOWN NAVIGATION LINK -->
+
+          <!-- DROPDOWN NAVIGATION LINK -->
+          <a class="dropdown-navigation-link {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ route('laravelroles::roles.index') }}">
+            {!! trans('titles.laravelroles') !!}
+            </a>
+          <!-- /DROPDOWN NAVIGATION LINK -->
+
+          <!-- DROPDOWN NAVIGATION LINK -->
+          <a class="dropdown-navigation-link {{ Request::is('users', 'users/' . Auth::user()->id, 'users/' . Auth::user()->id . '/edit') ? 'active' : null }}" href="{{ url('/users') }}">
+            {!! trans('titles.adminUserList') !!}
+        </a>
+          <!-- /DROPDOWN NAVIGATION LINK -->
+
+          <!-- DROPDOWN NAVIGATION LINK -->
+          <a class="dropdown-navigation-link {{ Request::is('users/create') ? 'active' : null }}" href="{{ url('/users/create') }}">
+            {!! trans('titles.adminNewUser') !!}
+        </a>
+          <!-- /DROPDOWN NAVIGATION LINK -->
+
+          <!-- DROPDOWN NAVIGATION LINK -->
+          <a class="dropdown-navigation-link  {{ Request::is('logs') ? 'active' : null }}" href="{{ url('/logs') }}">
+            {!! trans('titles.adminLogs') !!}
+        </a>
+          <!-- /DROPDOWN NAVIGATION LINK -->
+
+          <!-- DROPDOWN NAVIGATION CATEGORY -->
+          <p class="dropdown-navigation-category">Account</p>
+          <!-- /DROPDOWN NAVIGATION CATEGORY -->
+
+          <!-- DROPDOWN NAVIGATION LINK -->
+          <a class="dropdown-navigation-link {{ Request::is('activity') ? 'active' : null }}" href="{{ url('/activity') }}">
+            {!! trans('titles.adminActivity') !!}
+        </a>
+          <!-- /DROPDOWN NAVIGATION LINK -->
+
+          <!-- DROPDOWN NAVIGATION LINK -->
+          <a class="dropdown-navigation-link {{ Request::is('phpinfo') ? 'active' : null }}" href="{{ url('/phpinfo') }}">
+            {!! trans('titles.adminPHP') !!}
+        </a>
+          <!-- /DROPDOWN NAVIGATION LINK -->
+
+          <!-- DROPDOWN NAVIGATION LINK -->
+          <a class="dropdown-navigation-link {{ Request::is('routes') ? 'active' : null }}" href="{{ url('/routes') }}">
+            {!! trans('titles.adminRoutes') !!}
+        </a>
+
+
+          <!-- DROPDOWN NAVIGATION LINK -->
+          <a class="dropdown-navigation-link {{ Request::is('active-users') ? 'active' : null }}" href="{{ url('/active-users') }}">
+            {!! trans('titles.activeUsers') !!}
+        </a>
+          <!-- /DROPDOWN NAVIGATION LINK -->
+
+          <!-- DROPDOWN NAVIGATION LINK -->
+          <a class="dropdown-navigation-link {{ Request::is('blocker') ? 'active' : null }}" href="{{ route('laravelblocker::blocker.index') }}">
+            {!! trans('titles.laravelBlocker') !!}
+        </a>
+          <!-- /DROPDOWN NAVIGATION BUTTON -->
+        </div>
+        <!-- /DROPDOWN NAVIGATION -->
+      </div>
     <!-- /HEADER ACTIONS -->
 
     <!-- HEADER ACTIONS -->
@@ -293,8 +281,8 @@
         <!-- INTERACTIVE INPUT ICON WRAP -->
         <div class="interactive-input-icon-wrap">
           <!-- INTERACTIVE INPUT ICON -->
-          <svg class="interactive-input-icon icon-magnifying-glass">
-            <use xlink:href="#svg-magnifying-glass"></use>
+          <svg class="menu-item-link-icon icon-members">
+            <use xlink:href="#svg-members"></use>
           </svg>
           <!-- /INTERACTIVE INPUT ICON -->
         </div>
@@ -1334,6 +1322,7 @@
           <svg class="action-item-icon icon-settings">
             <use xlink:href="#svg-settings"></use>
           </svg>
+
           <!-- /ACTION ITEM ICON -->
         </div>
         <!-- /ACTION ITEM -->
@@ -1365,7 +1354,7 @@
 
             </div>
             <!-- /USER STATUS -->
-          </div>
+        </div>
           <!-- /DROPDOWN NAVIGATION HEADER -->
 
           <!-- DROPDOWN NAVIGATION CATEGORY -->

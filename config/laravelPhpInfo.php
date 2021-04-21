@@ -9,7 +9,7 @@ return [
     */
 
     // The parent blade file
-    'laravelPhpInfoBladeExtended'   => 'layouts.app',
+    'laravelPhpInfoBladeExtended'   => 'layouts.dashboard',
 
     // Enable `auth` middleware
     'authEnabled'                   => true,

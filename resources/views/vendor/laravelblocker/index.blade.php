@@ -82,6 +82,7 @@
         </div>
     </div>
 
+
     @include('laravelblocker::modals.confirm-modal',[
         'formTrigger' => 'confirmDelete',
         'modalClass' => 'danger',

@@ -6,6 +6,10 @@
 
 @section('content')
 
-    <users-count :registered={{ $users }} ></users-count>
+    <div class="container">
+        <div>
+             <users-count :registered={{ $users }} ></users-count>
+        </div>
+    </div>
 
 @endsection

@@ -4,14 +4,12 @@
     Welcome {{ Auth::user()->name }}
 @endsection
 
-@section('head')
-@endsection
+{{-- @section('head')
+@endsection --}}
 
 @section('content-home')
 <!-- PAGE LOADER -->
-    <!-- SECTION BANNER -->
 
-    <!-- /SECTION BANNER -->
 
     <!-- SECTION HEADER -->
     <div class="section-header">

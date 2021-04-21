@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('template_title')
   Log Information
@@ -12,7 +12,7 @@
 
 @section('content')
 
-  <div class="container-fluid logs-container">
+  <div class="container logs-container">
     <div class="row">
 
       <div class="col-sm-3 col-md-2 sidebar">

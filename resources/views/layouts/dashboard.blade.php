@@ -127,9 +127,9 @@
       <!-- MENU -->
       <ul class="menu small">
         <!-- MENU ITEM -->
-        <li class="menu-item">
+        <li class="menu-item ">
           <!-- MENU ITEM LINK -->
-          <a class="menu-item-link text-tooltip-tfr" href="newsfeed.html" data-title="Newsfeed">
+          <a class="menu-item-link text-tooltip-tfr" href="{{ url('/home') }}" data-title="Dashboard">
             <!-- MENU ITEM LINK ICON -->
             <svg class="menu-item-link-icon icon-newsfeed">
               <use xlink:href="#svg-newsfeed"></use>
@@ -139,39 +139,10 @@
           <!-- /MENU ITEM LINK -->
         </li>
         <!-- /MENU ITEM -->
-
         <!-- MENU ITEM -->
         <li class="menu-item">
           <!-- MENU ITEM LINK -->
-          <a class="menu-item-link text-tooltip-tfr" href="overview.html" data-title="Overview">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-overview">
-              <use xlink:href="#svg-overview"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link text-tooltip-tfr" href="groups.html" data-title="Groups">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-group">
-              <use xlink:href="#svg-group"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link text-tooltip-tfr" href="members.html" data-title="Members">
+          <a class="menu-item-link text-tooltip-tfr" href="{{ url('/active-users') }}" data-title="Admin">
             <!-- MENU ITEM LINK ICON -->
             <svg class="menu-item-link-icon icon-members">
               <use xlink:href="#svg-members"></use>
@@ -181,77 +152,6 @@
           <!-- /MENU ITEM LINK -->
         </li>
         <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link text-tooltip-tfr" href="badges.html" data-title="Badges">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-badges">
-              <use xlink:href="#svg-badges"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link text-tooltip-tfr" href="quests.html" data-title="Quests">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-quests">
-              <use xlink:href="#svg-quests"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link text-tooltip-tfr" href="streams.html" data-title="Streams">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-streams">
-              <use xlink:href="#svg-streams"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link text-tooltip-tfr" href="events.html" data-title="Events">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-events">
-              <use xlink:href="#svg-events"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link text-tooltip-tfr" href="forums.html" data-title="Forums">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-forums">
-              <use xlink:href="#svg-forums"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
         <!-- MENU ITEM -->
         <li class="menu-item active">
           <!-- MENU ITEM LINK -->
@@ -350,43 +250,6 @@
       </div>
       <!-- /USER SHORT DESCRIPTION -->
 
-      <!-- BADGE LIST -->
-      <div class="badge-list small">
-        <!-- BADGE ITEM -->
-        <div class="badge-item">
-          <img src="{{asset('dashboard/img/badge/gold-s.png')}}" alt="badge-gold-s">
-        </div>
-        <!-- /BADGE ITEM -->
-
-        <!-- BADGE ITEM -->
-        <div class="badge-item">
-          <img src="{{asset('dashboard/img/badge/age-s.png')}}" alt="badge-age-s">
-        </div>
-        <!-- /BADGE ITEM -->
-
-        <!-- BADGE ITEM -->
-        <div class="badge-item">
-          <img src="{{asset('dashboard/img/badge/caffeinated-s.png')}}" alt="badge-caffeinated-s">
-        </div>
-        <!-- /BADGE ITEM -->
-
-        <!-- BADGE ITEM -->
-        <div class="badge-item">
-          <img src="{{asset('dashboard/img/badge/warrior-s.png')}}" alt="badge-warrior-s">
-        </div>
-        <!-- /BADGE ITEM -->
-
-        <!-- BADGE ITEM -->
-        <a class="badge-item" href="profile-badges.html">
-          <img src="{{asset('dashboard/img/badge/blank-s.png')}}" alt="badge-blank-s">
-          <!-- BADGE ITEM TEXT -->
-          <p class="badge-item-text">+9</p>
-          <!-- /BADGE ITEM TEXT -->
-        </a>
-        <!-- /BADGE ITEM -->
-      </div>
-      <!-- /BADGE LIST -->
-
       <!-- USER STATS -->
       <div class="user-stats">
         <!-- USER STAT -->
@@ -432,43 +295,13 @@
         <!-- MENU ITEM -->
         <li class="menu-item">
           <!-- MENU ITEM LINK -->
-          <a class="menu-item-link" href="newsfeed.html">
+          <a class="menu-item-link" href="{{ url('/home') }}">
             <!-- MENU ITEM LINK ICON -->
             <svg class="menu-item-link-icon icon-newsfeed">
               <use xlink:href="#svg-newsfeed"></use>
             </svg>
             <!-- /MENU ITEM LINK ICON -->
-            Newsfeed
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link" href="overview.html">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-overview">
-              <use xlink:href="#svg-overview"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-            Overview
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link" href="groups.html">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-group">
-              <use xlink:href="#svg-group"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-            Groups
+            Dashboard
           </a>
           <!-- /MENU ITEM LINK -->
         </li>
@@ -483,82 +316,7 @@
               <use xlink:href="#svg-members"></use>
             </svg>
             <!-- /MENU ITEM LINK ICON -->
-            Members
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link" href="badges.html">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-badges">
-              <use xlink:href="#svg-badges"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-            Badges
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link" href="quests.html">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-quests">
-              <use xlink:href="#svg-quests"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-            Quests
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link" href="streams.html">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-streams">
-              <use xlink:href="#svg-streams"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-            Streams
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link" href="events.html">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-events">
-              <use xlink:href="#svg-events"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-            Events
-          </a>
-          <!-- /MENU ITEM LINK -->
-        </li>
-        <!-- /MENU ITEM -->
-
-        <!-- MENU ITEM -->
-        <li class="menu-item">
-          <!-- MENU ITEM LINK -->
-          <a class="menu-item-link" href="forums.html">
-            <!-- MENU ITEM LINK ICON -->
-            <svg class="menu-item-link-icon icon-forums">
-              <use xlink:href="#svg-forums"></use>
-            </svg>
-            <!-- /MENU ITEM LINK ICON -->
-            Forums
+            Admin
           </a>
           <!-- /MENU ITEM LINK -->
         </li>
