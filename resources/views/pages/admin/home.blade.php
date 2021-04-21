@@ -7,9 +7,8 @@
 {{-- @section('head')
 @endsection --}}
 
-@section('content-home')
+@section('content')
 <!-- PAGE LOADER -->
-
 
     <!-- SECTION HEADER -->
     <div class="section-header">

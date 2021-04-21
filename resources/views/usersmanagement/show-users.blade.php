@@ -26,7 +26,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="py-5">
         <div class="section-header-info">
             <!-- SECTION PRETITLE -->
             <p class="section-pretitle">Browse Marina's</p>
@@ -228,7 +228,7 @@
               <!-- /USER PREVIEW INFO -->
             </div>
             @endforeach
-          </div>
+        </div>
     </div>
     @include('modals.modal-delete')
 

@@ -3,9 +3,10 @@
 @section('template_title')
     {{ trans('profile.templateTitle') }}
 @endsection
-
+<link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 @section('content')
-    <div class="container">
+
+    <div class="py-5 w-100">
         <div class="row">
             <div class="col-12">
                 <div class="card border-0">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('template_title')
     {!! trans('usersmanagement.editing-user', ['name' => $user->name]) !!}
@@ -15,9 +15,9 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="my-5 w-100">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1">
+            <div class="col-lg-12 ">
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">

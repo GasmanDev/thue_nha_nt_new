@@ -32,7 +32,7 @@
 
     @include('laravelblocker::partials.flash-messages')
 
-    <div class="container">
+    <div class="my-5 w-100">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="{{ $containerClass }} {{ $blockerBootstrapCardClasses }}">

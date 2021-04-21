@@ -4,6 +4,6 @@ app.querySelector('.page-loader', function (el) {
   const hidePageLoader = function () {
     pageLoader.classList.add('hidden');
   };
-  
+
   window.addEventListener('load', hidePageLoader);
 });

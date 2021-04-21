@@ -18,6 +18,11 @@
   width: 100%;
   display: table;
 
+  button {
+    > a {
+        color: $white;
+    }
+  }
   &.table-forum-category {
     .forum-category {
       width: 384px;
@@ -32,7 +37,7 @@
         }
 
         &:last-child {
-          width: 284px; 
+          width: 284px;
         }
       }
     }
@@ -83,7 +88,7 @@
     .table-column {
       &:first-child {
         .table-text {
-          width: 100px;
+        //   width: 100px;
         }
       }
     }
@@ -94,7 +99,7 @@
     .table-column {
       &:first-child {
         .table-text {
-          width: 100px;
+        //   width: 100px;
         }
       }
 
@@ -105,11 +110,11 @@
       }
     }
 
-    .table-column {
-      &:last-child {
-        width: 16px;
-      }
-    }
+    // .table-column {
+    //   &:last-child {
+    //     width: 16px;
+    //   }
+    // }
 
     .table-row {
       &:first-child {
@@ -122,7 +127,7 @@
 
       &:last-child {
         height: 55px;
-        
+
         .table-column {
           padding-bottom: 15px;
         }
@@ -154,7 +159,7 @@
       &:first-child {
         padding-left: 0;
       }
-  
+
       &:last-child {
         padding-right: 0;
       }
@@ -170,7 +175,7 @@
         &.micro {
           &:first-child {
             height: 55px;
-    
+
             .table-column {
               padding-top: 15px;
             }
@@ -180,7 +185,7 @@
         &.tiny {
           &:first-child {
             height: 77px;
-    
+
             .table-column {
               padding-top: 11px;
             }
@@ -192,19 +197,19 @@
             &:first-child {
               border-top-left-radius: 0;
             }
-  
+
             &:last-child {
               border-top-right-radius: 0;
             }
           }
         }
-  
+
         &:last-child {
           .table-column {
             &:first-child {
               border-bottom-left-radius: 0;
             }
-  
+
             &:last-child {
               border-bottom-right-radius: 0;
             }
@@ -219,7 +224,7 @@
           &:first-child {
             padding-left: 0;
           }
-      
+
           &:last-child {
             padding-right: 0;
           }
@@ -239,7 +244,7 @@
     .table-body {
       box-shadow: none;
     }
-    
+
     .table-row {
       border-radius: 12px;
       box-shadow: $shadow-light;
@@ -304,7 +309,7 @@
     }
 
     &.padded {
-      padding: 0 24px;
+      padding: 0 14px;
     }
 
     &.padded-medium {
@@ -408,7 +413,7 @@
 
       &.auto {
         height: auto;
-        
+
         .table-column {
           padding-top: 44px;
           padding-bottom: 44px;
@@ -430,7 +435,7 @@
     }
 
     &.padded {
-      padding: 0 24px;
+      padding: 0 14px;
     }
 
     &.padded-medium {
@@ -528,7 +533,7 @@
 }
 
 /*--------------------
-    MEDIA QUERIES 
+    MEDIA QUERIES
 --------------------*/
 @media screen and (max-width: 1260px) {
   .table {
@@ -679,7 +684,7 @@
           &.tiny {
             &:first-child {
               height: auto;
-              
+
               .table-column {
                 padding-top: 24px;
               }
@@ -691,7 +696,7 @@
 
     .table-row {
       height: auto;
-      
+
       .table-column {
         padding-top: 28px;
         padding-bottom: 28px;

@@ -17,9 +17,9 @@
 @endphp
 
 @section('content')
-    <div class="container">
+    <div class="py-5 w-100">
         <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+            <div class="col-12 col-md-10 col-lg-12 ">
                 <div class="card">
                     <div class="card-header">
                         {{ trans('profile.showProfileTitle',['username' => $user->name]) }}

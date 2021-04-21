@@ -104,7 +104,7 @@
 @endif
 
 @section('content')
-    <div class="container">
+    <div class="my-3 w-100">
         <div class="row">
             <div class="col-md-12">
                 <div class="{{ $containerClass }} {{ $bootstrapCardClasses }}">

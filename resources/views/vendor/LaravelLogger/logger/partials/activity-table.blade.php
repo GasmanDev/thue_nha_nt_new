@@ -254,8 +254,8 @@ if (Request::is('activity/cleared')) {
 </div>
 
 @if(config('LaravelLogger.loggerPaginationEnabled'))
-    <div class="text-center">
-        <div class="d-flex justify-content-center">
+    <div class="text-center ">
+        <div class="d-flex justify-content-center my-5">
             {!! $activities->render() !!}
         </div>
         <p>

@@ -8,6 +8,19 @@
 <link href="{{asset('dashboard/css/vendor/simplebar.css')}}" rel="stylesheet">
 <link href="{{asset('dashboard/img/favicon.ico')}}" rel="icon">
 
+
+{{-- <script>
+    window.Laravel = {!! json_encode([
+        'csrfToken' => csrf_token(),
+    ]) !!};
+</script> --}}
+{{-- @if (Auth::User() && (Auth::User()->profile) && $theme->link != null && $theme->link != 'null')
+            <link rel="stylesheet" type="text/css" href="{{ $theme->link }}">
+        @endif --}}
+
+@yield('head')
+@include('scripts.ga-analytics')
+
   <title>Vikinger | Marketplace</title>
 </head>
 <body>
@@ -68,7 +81,7 @@
             <p class="section-banner-text">The best place for the community to buy and sell!</p>
             <!-- /SECTION BANNER TEXT -->
           </div>
-        @yield('content-home')
+        @yield('content')
     </div>
     <!-- NAVIGATION WIDGET -->
     <nav id="navigation-widget-small" class="navigation-widget navigation-widget-desktop closed sidebar left delayed">
@@ -689,7 +702,14 @@
     </nav>
     <!-- /NAVIGATION WIDGET -->
   </div>
-  @yield('content')
+ {{-- Scripts --}}
+ <script src="{{ mix('/js/app.js') }}"></script>
+
+ @if(config('settings.googleMapsAPIStatus'))
+     {!! HTML::script('//maps.googleapis.com/maps/api/js?key='.config("settings.googleMapsAPIKey").'&libraries=places&dummy=.js', array('type' => 'text/javascript')) !!}
+ @endif
+
+ @yield('footer_scripts')
   <!-- /CONTENT GRID -->
   <script src="{{asset('dashboard/js/utils/app.js')}}"></script>
   <script src="{{asset('dashboard/js/utils/page-loader.js')}}"></script>
@@ -700,6 +720,7 @@
   <script src="{{asset('dashboard/js/global/global.tooltips.js')}}"></script>
   <script src="{{asset('dashboard/js/header/header.js')}}"></script>
   <script src="{{asset('dashboard/js/sidebar/sidebar.js')}}"></script>
+  <script src="{{asset('dashboard/js/content/content.js')}}"></script>
   <script src="{{asset('dashboard/js/form/form.utils.js')}}"></script>
   <script src="{{asset('dashboard/js/utils/svg-loader.js')}}"></script>
 </body>

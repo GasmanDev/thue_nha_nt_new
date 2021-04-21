@@ -136,6 +136,7 @@ app.querySelector('.content-grid', function (el) {
           activeClass = 'active',
           hiddenClass = 'hidden',
           delayedClass = 'delayed';
+          console.log('active');
 
     const setNavigationWidgetDimensions = function () {
       navigationWidget.style.height = `${window.innerHeight - topOffset}px`;

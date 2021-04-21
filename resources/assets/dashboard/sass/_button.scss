@@ -9,6 +9,8 @@
 .button {
   display: inline-block;
   height: 48px;
+  min-width: 80px;
+  width: 100%;
   border-radius: 10px;
   background-color: $color-button-background;
   color: $white;
@@ -89,7 +91,7 @@
     .button-icon {
       fill: $color-icon;
     }
-    
+
     &:hover {
       color: $white;
       background-color: $color-button-white-background-hover;
@@ -156,7 +158,7 @@
   }
 
   &.padded {
-    padding: 0 24px;
+    padding: 0 14px;
   }
 
   .button-icon {

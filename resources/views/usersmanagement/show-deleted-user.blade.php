@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('template_title')
     {!!trans('usersmanagement.showing-user-deleted')!!} {{ $user->name }}
@@ -13,7 +13,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="my-5 w-100">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="card">

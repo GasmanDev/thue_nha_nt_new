@@ -12,7 +12,7 @@
 
 @section('content')
 
-  <div class="container logs-container">
+  <div class="w-100 my-5">
     <div class="row">
 
       <div class="col-sm-3 col-md-2 sidebar">

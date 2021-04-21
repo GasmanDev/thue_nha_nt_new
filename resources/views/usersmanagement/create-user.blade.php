@@ -8,176 +8,174 @@
 @endsection
 
 @section('content')
-    <div class="container">
-        <div class="grid small-space">
-            <!-- GRID COLUMN -->
-            <div class="grid-column">
-              <!-- WIDGET BOX -->
-              <div class="widget-box">
-                <!-- WIDGET BOX TITLE -->
-                <p class="widget-box-title">Create New User</p>
-                <!-- /WIDGET BOX TITLE -->
+    <div class="grid small-space">
+        <!-- GRID COLUMN -->
+        <div class="grid-column">
+          <!-- WIDGET BOX -->
+          <div class="widget-box">
+            <!-- WIDGET BOX TITLE -->
+            <p class="widget-box-title">Create New User</p>
+            <!-- /WIDGET BOX TITLE -->
 
-                <!-- WIDGET BOX CONTENT -->
-                <div class="widget-box-content">
-                  <!-- FORM -->
-                  <form class="form">
-                    <!-- FORM ROW -->
-                    <div class="form-row split">
-                        <!-- FORM ITEM -->
-                        <div class="form-item {{ $errors->has('email') ? ' has-error ' : '' }}">
-                          <!-- FORM INPUT -->
-                          <div class="form-input small">
-                            <label for="billing-email">Email</label>
-                            <input type="text" id="email" name="email">
-                            @if ($errors->has('email'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('email') }}</strong>
-                            </span>
-                              @endif
-                          </div>
-                          <!-- /FORM INPUT -->
-                        </div>
-                        <!-- /FORM ITEM -->
-
-                        <!-- FORM ITEM -->
-                        <div class="form-item">
-                          <!-- FORM INPUT -->
-                          <div class="form-input small {{ $errors->has('name') ? ' has-error ' : '' }}">
-                            <label for="name">User Name</label>
-                            <input type="text" id="name" name="name">
-                            @if ($errors->has('name'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('name') }}</strong>
-                            </span>
-                            @endif
-                          </div>
-                          <!-- /FORM INPUT -->
-                        </div>
-                        <!-- /FORM ITEM -->
-                      </div>
-                      <!-- /FORM ROW -->
-                    <div class="form-row split">
-                      <!-- FORM ITEM -->
-                      <div class="form-item {{ $errors->has('first_name') ? ' has-error ' : '' }}">
-                        <!-- FORM INPUT -->
-                        <div class="form-input small">
-                          <label for="first-name">First Name</label>
-                          <input type="text" id="first-name" name="first_name">
-                          @if ($errors->has('first_name'))
-                          <span class="help-block">
-                              <strong>{{ $errors->first('first_name') }}</strong>
-                          </span>
-                        @endif
-                        </div>
-                        <!-- /FORM INPUT -->
-                      </div>
-                      <!-- /FORM ITEM -->
-
-                      <!-- FORM ITEM -->
-                      <div class="form-item {{ $errors->has('last_name') ? ' has-error ' : '' }}">
-                        <!-- FORM INPUT -->
-                        <div class="form-input small">
-                          <label for="last_name">Last Name</label>
-                          <input type="text" id="last_name" name="last_name">
-                          @if ($errors->has('last_name'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('last_name') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                        <!-- /FORM INPUT -->
-                      </div>
-                      <!-- /FORM ITEM -->
-                    </div>
-                    <!-- /FORM ROW -->
-                    <!-- FORM ROW -->
-                    <div class="form-row">
-                      <!-- FORM ITEM -->
-                      <div class="form-item {{ $errors->has('role') ? ' has-error ' : '' }}">
-                        <!-- FORM SELECT -->
-                        <div class="form-select">
-                          <label for="role">Role</label>
-                          <select id="role" name="role">
-                            <option value="">{{ trans('forms.create_user_ph_role') }}</option>
-                                    @if ($roles)
-                                        @foreach($roles as $role)
-                                            <option value="{{ $role->id }}">{{ $role->name }}</option>
-                                        @endforeach
-                                    @endif
-                          </select>
-                          @if ($errors->has('role'))
-                          <span class="help-block">
-                              <strong>{{ $errors->first('role') }}</strong>
-                          </span>
-                        @endif
-                          <!-- FORM SELECT ICON -->
-                          <svg class="form-select-icon icon-small-arrow">
-                            <use xlink:href="#svg-small-arrow"></use>
-                          </svg>
-                          <!-- /FORM SELECT ICON -->
-                        </div>
-                        <!-- /FORM SELECT -->
-                      </div>
-                      <!-- /FORM ITEM -->
-                    </div>
-                    <div class="form-row">
-                        <!-- FORM ITEM -->
-                        <div class="form-item {{ $errors->has('password_confirmation') ? ' has-error ' : '' }}">
-                          <!-- FORM INPUT -->
-                          <div class="form-input small">
-                            <label for="password">Password</label>
-                            <input type="text" id="password_confirmation" name="password_confirmation">
-                            @if ($errors->has('password_confirmation'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('password_confirmation') }}</strong>
-                            </span>
+            <!-- WIDGET BOX CONTENT -->
+            <div class="widget-box-content">
+              <!-- FORM -->
+              <form class="form">
+                <!-- FORM ROW -->
+                <div class="form-row split">
+                    <!-- FORM ITEM -->
+                    <div class="form-item {{ $errors->has('email') ? ' has-error ' : '' }}">
+                      <!-- FORM INPUT -->
+                      <div class="form-input small">
+                        <label for="billing-email">Email</label>
+                        <input type="text" id="email" name="email">
+                        @if ($errors->has('email'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
                           @endif
-                          </div>
-                          <!-- /FORM INPUT -->
-                        </div>
-                        <!-- /FORM ITEM -->
+                      </div>
+                      <!-- /FORM INPUT -->
                     </div>
-                    <div class="form-row">
-                        <!-- FORM ITEM -->
-                        <div class="form-item {{ $errors->has('first_name') ? ' has-error ' : '' }}">
-                          <!-- FORM INPUT -->
-                          <div class="form-input small">
-                            <label for="first-name">Confirm Password</label>
-                            <input type="text" id="first-name" name="first_name">
-                            @if ($errors->has('first_name'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('first_name') }}</strong>
-                            </span>
-                          @endif
-                          </div>
-                          <!-- /FORM INPUT -->
-                        </div>
-                        <!-- /FORM ITEM -->
-                    </div>
-                    <div class="form-row w-50 mx-auto">
-                        <!-- FORM ITEM -->
-                        <div class="form-item">
-                            <!-- BUTTON -->
-                            <button type="submit" class="button full primary">Create New User!</button>
-                            <!-- /BUTTON -->
-                        </div>
-                        <!-- /FORM ITEM -->
-                    </div>
+                    <!-- /FORM ITEM -->
 
-                    <!-- /FORM ROW -->
-                  </form>
-                  <!-- /FORM -->
+                    <!-- FORM ITEM -->
+                    <div class="form-item">
+                      <!-- FORM INPUT -->
+                      <div class="form-input small {{ $errors->has('name') ? ' has-error ' : '' }}">
+                        <label for="name">User Name</label>
+                        <input type="text" id="name" name="name">
+                        @if ($errors->has('name'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('name') }}</strong>
+                        </span>
+                        @endif
+                      </div>
+                      <!-- /FORM INPUT -->
+                    </div>
+                    <!-- /FORM ITEM -->
+                  </div>
+                  <!-- /FORM ROW -->
+                <div class="form-row split">
+                  <!-- FORM ITEM -->
+                  <div class="form-item {{ $errors->has('first_name') ? ' has-error ' : '' }}">
+                    <!-- FORM INPUT -->
+                    <div class="form-input small">
+                      <label for="first-name">First Name</label>
+                      <input type="text" id="first-name" name="first_name">
+                      @if ($errors->has('first_name'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('first_name') }}</strong>
+                      </span>
+                    @endif
+                    </div>
+                    <!-- /FORM INPUT -->
+                  </div>
+                  <!-- /FORM ITEM -->
+
+                  <!-- FORM ITEM -->
+                  <div class="form-item {{ $errors->has('last_name') ? ' has-error ' : '' }}">
+                    <!-- FORM INPUT -->
+                    <div class="form-input small">
+                      <label for="last_name">Last Name</label>
+                      <input type="text" id="last_name" name="last_name">
+                      @if ($errors->has('last_name'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('last_name') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                    <!-- /FORM INPUT -->
+                  </div>
+                  <!-- /FORM ITEM -->
                 </div>
-                <!-- WIDGET BOX CONTENT -->
-              </div>
-              <!-- /WIDGET BOX -->
-            </div>
-            <!-- /GRID COLUMN -->
+                <!-- /FORM ROW -->
+                <!-- FORM ROW -->
+                <div class="form-row">
+                  <!-- FORM ITEM -->
+                  <div class="form-item {{ $errors->has('role') ? ' has-error ' : '' }}">
+                    <!-- FORM SELECT -->
+                    <div class="form-select">
+                      <label for="role">Role</label>
+                      <select id="role" name="role">
+                        <option value="">{{ trans('forms.create_user_ph_role') }}</option>
+                                @if ($roles)
+                                    @foreach($roles as $role)
+                                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                    @endforeach
+                                @endif
+                      </select>
+                      @if ($errors->has('role'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('role') }}</strong>
+                      </span>
+                    @endif
+                      <!-- FORM SELECT ICON -->
+                      <svg class="form-select-icon icon-small-arrow">
+                        <use xlink:href="#svg-small-arrow"></use>
+                      </svg>
+                      <!-- /FORM SELECT ICON -->
+                    </div>
+                    <!-- /FORM SELECT -->
+                  </div>
+                  <!-- /FORM ITEM -->
+                </div>
+                <div class="form-row">
+                    <!-- FORM ITEM -->
+                    <div class="form-item {{ $errors->has('password_confirmation') ? ' has-error ' : '' }}">
+                      <!-- FORM INPUT -->
+                      <div class="form-input small">
+                        <label for="password">Password</label>
+                        <input type="text" id="password_confirmation" name="password_confirmation">
+                        @if ($errors->has('password_confirmation'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('password_confirmation') }}</strong>
+                        </span>
+                      @endif
+                      </div>
+                      <!-- /FORM INPUT -->
+                    </div>
+                    <!-- /FORM ITEM -->
+                </div>
+                <div class="form-row">
+                    <!-- FORM ITEM -->
+                    <div class="form-item {{ $errors->has('first_name') ? ' has-error ' : '' }}">
+                      <!-- FORM INPUT -->
+                      <div class="form-input small">
+                        <label for="first-name">Confirm Password</label>
+                        <input type="text" id="first-name" name="first_name">
+                        @if ($errors->has('first_name'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('first_name') }}</strong>
+                        </span>
+                      @endif
+                      </div>
+                      <!-- /FORM INPUT -->
+                    </div>
+                    <!-- /FORM ITEM -->
+                </div>
+                <div class="form-row w-50 mx-auto">
+                    <!-- FORM ITEM -->
+                    <div class="form-item">
+                        <!-- BUTTON -->
+                        <button type="submit" class="button full primary">Create New User!</button>
+                        <!-- /BUTTON -->
+                    </div>
+                    <!-- /FORM ITEM -->
+                </div>
 
-            <!-- GRID COLUMN -->
-            <!-- /GRID COLUMN -->
+                <!-- /FORM ROW -->
+              </form>
+              <!-- /FORM -->
+            </div>
+            <!-- WIDGET BOX CONTENT -->
           </div>
+          <!-- /WIDGET BOX -->
+        </div>
+        <!-- /GRID COLUMN -->
+
+        <!-- GRID COLUMN -->
+        <!-- /GRID COLUMN -->
     </div>
 
 @endsection

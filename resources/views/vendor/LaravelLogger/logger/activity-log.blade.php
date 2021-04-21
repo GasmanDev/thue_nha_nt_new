@@ -56,7 +56,7 @@
 
 @section('content')
 
-    <div class="container-fluid">
+    <div class="my-5 w-100">
        @if(config('LaravelLogger.enableSearch'))
        @include('LaravelLogger::partials.form-search')
        @endif

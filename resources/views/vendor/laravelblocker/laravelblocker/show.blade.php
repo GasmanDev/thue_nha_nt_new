@@ -38,9 +38,9 @@
 
     @include('laravelblocker::partials.flash-messages')
 
-    <div class="container">
+    <div class="my-5 w-100">
         <div class="row">
-            <div class="col-md-12 col-lg-10 offset-lg-1">
+            <div class="col-md-12 col-lg-12 ">
                 <div class="{{ $containerClass }} {{ $blockerBootstrapCardClasses }}">
                     <div class="{{ $containerHeaderClass }}">
                         <div style="display: flex; justify-content: space-between; align-items: center;">

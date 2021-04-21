@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('template_title')
   {!! trans('usersmanagement.showing-user', ['name' => $user->name]) !!}
@@ -13,9 +13,9 @@
 
 @section('content')
 
-  <div class="container">
+  <div class="w-100 my-5">
     <div class="row">
-      <div class="col-lg-10 offset-lg-1">
+      <div class="col-lg-12">
 
         <div class="card">
 
