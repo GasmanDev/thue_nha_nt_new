@@ -1,6 +1,7 @@
 # BE
 - Register auto Verify [DONE]
-- Generate Database
+- Remove First name, last name in register
+- Generate Database 
 - Generate CRUD 
 - Generate Post
 - Generate Admin Verify Post

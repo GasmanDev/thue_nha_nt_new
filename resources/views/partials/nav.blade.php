@@ -113,15 +113,16 @@
             <!-- LOGO -->
             <a href="{{ route('dashboard') }}" class="logo">
                 <!-- ICON LOGO VIKINGER -->
-                <svg class="icon-logo-vikinger small">
+                {{-- <svg class="icon-logo-vikinger small">
                     <use xlink:href="#svg-logo-vikinger"></use>
-                </svg>
+                </svg> --}}
+                <img class="icon-logo-gohome small" src="{{asset('dashboard/img/gohomelogo.png')}}" alt="Go Home Logo">
                 <!-- /ICON LOGO VIKINGER -->
             </a>
             <!-- /LOGO -->
 
             <!-- HEADER BRAND TEXT -->
-            <h1 class="header-brand-text">GoHome</h1>
+            <h1 class="header-brand-text">Go Home</h1>
             <!-- /HEADER BRAND TEXT -->
         </div>
         <!-- /HEADER BRAND -->

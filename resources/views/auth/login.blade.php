@@ -130,7 +130,7 @@
       <!-- FORM ROW -->
       <div class="form-row space-between">
         <!-- FORM ITEM -->
-        <div class="form-item">
+        {{-- <div class="form-item">
           <!-- CHECKBOX WRAP -->
           <div class="checkbox-wrap">
             <input type="checkbox" id="login-remember" name="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -147,7 +147,7 @@
             <label for="login-remember">Remember Me</label>
           </div>
           <!-- /CHECKBOX WRAP -->
-        </div>
+        </div> --}}
         <!-- /FORM ITEM -->
 
         <!-- FORM ITEM -->
@@ -169,7 +169,7 @@
         <div class="form-item">
 
           <button type="submit" class="button medium secondary">
-            {{ __('Login') }}
+            {{ __('auth.login') }}
             </button>
           <!-- /BUTTON -->
         </div>
@@ -180,7 +180,7 @@
     <!-- /FORM -->
 
     <!-- LINED TEXT -->
-    <p class="lined-text">Login with your Social Account</p>
+    {{-- <p class="lined-text">Login with your Social Account</p>
     <!-- /LINED TEXT -->
 
     <!-- SOCIAL LINKS -->
@@ -226,7 +226,7 @@
       </a>
       <!-- /SOCIAL LINK -->
     </div>
-    <!-- /SOCIAL LINKS -->
+    <!-- /SOCIAL LINKS --> --}}
 </div>
 <div class="form-box login-register-form-element">
     <!-- FORM BOX DECORATION -->
@@ -277,7 +277,7 @@
         </div>
         <!-- /FORM ITEM -->
       </div>
-      <div class="form-row">
+      {{-- <div class="form-row">
         <!-- FORM ITEM -->
         <div class="form-item">
           <!-- FORM INPUT -->
@@ -312,7 +312,7 @@
           <!-- /FORM INPUT -->
         </div>
         <!-- /FORM ITEM -->
-      </div>
+      </div> --}}
       <!-- /FORM ROW -->
 
       <!-- FORM ROW -->
@@ -363,7 +363,7 @@
       <!-- /FORM ROW -->
 
       <!-- FORM ROW -->
-      <div class="form-row">
+      {{-- <div class="form-row">
         <!-- FORM ITEM -->
         <div class="form-item">
           <!-- CHECKBOX WRAP -->
@@ -383,7 +383,7 @@
           <!-- /CHECKBOX WRAP -->
         </div>
         <!-- /FORM ITEM -->
-      </div>
+      </div> --}}
       <!-- /FORM ROW -->
 
       <!-- FORM ROW -->
@@ -393,7 +393,7 @@
           <!-- BUTTON -->
           {{-- <button class="button medium primary">Register Now!</button> --}}
           <button type="submit" class="button medium primary">
-            {{ __('Register') }}
+            {{ __('auth.register') }}
          </button>
           <!-- /BUTTON -->
         </div>
@@ -404,7 +404,7 @@
     <!-- /FORM -->
 
     <!-- FORM TEXT -->
-    <p class="form-text">You'll receive a confirmation email in your inbox with a link to activate your account. If you have any problems, <a href="#">contact us</a>!</p>
+    <p class="form-text">Copyright 2021 <a href="#">Go Home</a></p>
     <!-- /FORM TEXT -->
 </div>
 @endsection

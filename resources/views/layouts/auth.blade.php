@@ -27,34 +27,34 @@
         <!-- LOGO -->
         <div class="logo">
             <!-- ICON LOGO VIKINGER -->
-            <svg class="icon-logo-vikinger">
+            {{-- <svg class="icon-logo-vikinger">
                 <use xlink:href="#svg-logo-vikinger"></use>
-            </svg>
+            </svg> --}}
+            <img class="icon-logo-gohome" src="{{asset('dashboard/img/gohomelogo.png')}}" alt="Go Home Logo">
             <!-- /ICON LOGO VIKINGER -->
         </div>
         <!-- /LOGO -->
 
         <!-- LANDING INFO PRETITLE -->
-        <h2 class="landing-info-pretitle">Welcome to</h2>
+        <h2 class="landing-info-pretitle">{{ trans('common.welcomeTo') }}</h2>
         <!-- /LANDING INFO PRETITLE -->
 
         <!-- LANDING INFO TITLE -->
-        <h1 class="landing-info-title">Vikinger</h1>
+        <h1 class="landing-info-title">Go Home</h1>
         <!-- /LANDING INFO TITLE -->
 
         <!-- LANDING INFO TEXT -->
-        <p class="landing-info-text">The next generation social network &amp; community! Connect with your friends
-            and play with our quests and badges gamification system!</p>
+        <p class="landing-info-text">{{ trans('common.landingInfo') }}</p>
         <!-- /LANDING INFO TEXT -->
 
         <!-- TAB SWITCH -->
         <div class="tab-switch">
             <!-- TAB SWITCH BUTTON -->
-            <p class="tab-switch-button login-register-form-trigger">Login</p>
+            <p class="tab-switch-button login-register-form-trigger">{{ trans('auth.login') }}</p>
             <!-- /TAB SWITCH BUTTON -->
 
             <!-- TAB SWITCH BUTTON -->
-            <p class="tab-switch-button login-register-form-trigger">Register</p>
+            <p class="tab-switch-button login-register-form-trigger">{{ trans('auth.register') }}</p>
             <!-- /TAB SWITCH BUTTON -->
         </div>
         <!-- /TAB SWITCH -->

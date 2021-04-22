@@ -36,7 +36,7 @@ return [
     'email'           => 'E-Mail Address',
     'password'        => 'Password',
     'rememberMe'      => ' Remember Me',
-    'login'           => 'Login',
+    'login'           => 'Đăng nhập',
     'forgot'          => 'Forgot Your Password?',
     'forgot_message'  => 'Password Troubles?',
     'name'            => 'Username',
