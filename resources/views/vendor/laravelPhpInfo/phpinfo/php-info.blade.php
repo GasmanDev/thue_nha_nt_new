@@ -1,4 +1,5 @@
 @extends(config('laravelPhpInfo.laravelPhpInfoBladeExtended'))
+@section('sidebar_active', 'users')
 
 @section('title')
     @lang('laravelPhpInfo::laravel-phpinfo.title')
@@ -104,13 +105,28 @@
 @endif
 
 @section('content')
+<div class="section-banner">
+    <!-- SECTION BANNER ICON -->
+
+    <img class="section-banner-icon" src="{{ asset('dashboard/img/banner/newsfeed-icon.png') }}" alt="php-info">
+
+    <!-- /SECTION BANNER ICON -->
+
+    <!-- SECTION BANNER TITLE -->
+    <p class="section-banner-title {{ $containerHeaderClass }}">
+        @lang('laravelPhpInfo::laravel-phpinfo.title')
+    </p>
+    <!-- /SECTION BANNER TITLE -->
+
+    <!-- SECTION BANNER TEXT -->
+    <p class="section-banner-text">Check out all the members streams!</p>
+    <!-- /SECTION BANNER TEXT -->
+</div>
     <div class="my-3 w-100">
         <div class="row">
             <div class="col-md-12">
                 <div class="{{ $containerClass }} {{ $bootstrapCardClasses }}">
-                    <div class="{{ $containerHeaderClass }}">
-                        @lang('laravelPhpInfo::laravel-phpinfo.title')
-                    </div>
+
                     <div class="{{ $containerBodyClass }}">
                         <div class="php-info">
                             @php

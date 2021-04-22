@@ -1,13 +1,29 @@
 @extends('layouts.dashboard')
+@section('sidebar_active', 'users')
 
 @section('template_title')
     {!! trans('usersmanagement.create-new-user') !!}
 @endsection
 
+
 @section('template_fastload_css')
 @endsection
 
 @section('content')
+    <div class="section-banner">
+        <!-- SECTION BANNER ICON -->
+        <img class="section-banner-icon" src="{{ asset('dashboard/img/banner/accounthub-icon.png') }}"
+            alt="accounthub-icon">
+        <!-- /SECTION BANNER ICON -->
+
+        <!-- SECTION BANNER TITLE -->
+        <p class="section-banner-title">Account Hub</p>
+        <!-- /SECTION BANNER TITLE -->
+
+        <!-- SECTION BANNER TEXT -->
+        <p class="section-banner-text">Profile info, messages, settings and much more!</p>
+        <!-- /SECTION BANNER TEXT -->
+    </div>
     <div class="grid small-space">
         <!-- GRID COLUMN -->
         <div class="grid-column">

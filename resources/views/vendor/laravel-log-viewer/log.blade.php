@@ -3,6 +3,7 @@
 @section('template_title')
   Log Information
 @endsection
+@section('sidebar_active', 'users')
 
 @section('template_linked_css')
 
@@ -11,11 +12,35 @@
 @endsection
 
 @section('content')
+<div class="section-banner">
+    <!-- SECTION BANNER ICON -->
 
+    <img class="section-banner-icon" src="{{ asset('dashboard/img/banner/streams-icon.png') }}" alt="streams-icon">
+
+    <!-- /SECTION BANNER ICON -->
+
+    <!-- SECTION BANNER TITLE -->
+    <p class="section-banner-title">
+        @foreach($files as $file)
+        <a href="?l={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}" class="list-group-item @if ($current_file == $file) llv-active @endif">
+          {{$file}}
+          @if ($current_file == $file)
+            <span class="badge pull-right">
+              {{ count($logs) }}
+            </span>
+          @endif
+        </a>
+      @endforeach</p>
+    <!-- /SECTION BANNER TITLE -->
+
+    <!-- SECTION BANNER TEXT -->
+    <p class="section-banner-text">Check out all the members streams!</p>
+    <!-- /SECTION BANNER TEXT -->
+</div>
   <div class="w-100 my-5">
     <div class="row">
 
-      <div class="col-sm-3 col-md-2 sidebar">
+      {{-- <div class="col-sm-3 col-md-2 sidebar">
         <h4><span class="fa fa-fw fa-file-code-o" aria-hidden="true"></span> Log Files</h4>
         <div class="list-group">
           @foreach($files as $file)
@@ -29,7 +54,7 @@
             </a>
           @endforeach
         </div>
-      </div>
+      </div> --}}
 
       <div class="col-sm-9 col-md-10 table-container">
         @if ($logs === null)
