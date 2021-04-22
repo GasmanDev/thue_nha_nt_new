@@ -1,4 +1,5 @@
 @extends('layouts.dashboard')
+@section('sidebar_active', 'users')
 
 @section('template_title')
     {{ trans('titles.activeUsers') }}

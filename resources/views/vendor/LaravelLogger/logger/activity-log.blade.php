@@ -1,4 +1,5 @@
 @extends(config('LaravelLogger.loggerBladeExtended'))
+@section('sidebar_active', 'users')
 
 @if(config('LaravelLogger.bladePlacement') == 'yield')
 @section(config('LaravelLogger.bladePlacementCss'))
@@ -55,7 +56,28 @@
 @endphp
 
 @section('content')
+    <div class="section-banner">
+    <!-- SECTION BANNER ICON -->
 
+    <img class="section-banner-icon" src="{{ asset('dashboard/img/banner/streams-icon.png') }}" alt="streams-icon">
+
+    <!-- /SECTION BANNER ICON -->
+
+    <!-- SECTION BANNER TITLE -->
+    <p class="section-banner-title">
+                                {!! trans('LaravelLogger::laravel-logger.dashboard.title') !!}
+                                <small>
+                                    <sup class="label label-default">
+                                        {{ $totalActivities }} {!! trans('LaravelLogger::laravel-logger.dashboard.subtitle') !!}
+                                    </sup>
+                                </small>
+    </p>
+    <!-- /SECTION BANNER TITLE -->
+
+    <!-- SECTION BANNER TEXT -->
+    <p class="section-banner-text">Check out all the members streams!</p>
+    <!-- /SECTION BANNER TEXT -->
+    </div>
     <div class="my-5 w-100">
        @if(config('LaravelLogger.enableSearch'))
        @include('LaravelLogger::partials.form-search')
@@ -72,14 +94,14 @@
 
                             @if(config('LaravelLogger.enableSubMenu'))
 
-                            <span>
+                            {{-- <span>
                                 {!! trans('LaravelLogger::laravel-logger.dashboard.title') !!}
                                 <small>
                                     <sup class="label label-default">
                                         {{ $totalActivities }} {!! trans('LaravelLogger::laravel-logger.dashboard.subtitle') !!}
                                     </sup>
                                 </small>
-                            </span>
+                            </span> --}}
 
                             <div class="btn-group pull-right btn-group-xs">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

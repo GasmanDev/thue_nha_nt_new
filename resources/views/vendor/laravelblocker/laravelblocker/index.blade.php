@@ -1,4 +1,5 @@
 @extends(config('laravelblocker.laravelBlockerBladeExtended'))
+@section('sidebar_active', 'users')
 
 @section(config('laravelblocker.laravelBlockerTitleExtended'))
     {!! trans('laravelblocker::laravelblocker.titles.show-blocked') !!}
@@ -34,7 +35,23 @@
 @section('content')
 
     @include('laravelblocker::partials.flash-messages')
+    <div class="section-banner">
+        <!-- SECTION BANNER ICON -->
 
+        <img class="section-banner-icon" src="{{ asset('dashboard/img/banner/groups-icon.png') }}" alt="php-info">
+
+        <!-- /SECTION BANNER ICON -->
+
+        <!-- SECTION BANNER TITLE -->
+        <p class="section-banner-title">
+            BLOKER
+        </p>
+        <!-- /SECTION BANNER TITLE -->
+
+        <!-- SECTION BANNER TEXT -->
+        <p class="section-banner-text">Check out all the members streams!</p>
+        <!-- /SECTION BANNER TEXT -->
+    </div>
     <div class="w-100 my-5">
         <div class="row">
             <div class="col-sm-12">

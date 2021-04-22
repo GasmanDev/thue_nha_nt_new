@@ -37,7 +37,7 @@
     @yield('content')
 </div>
 <!-- SIDE BAR -->
-@hasSection('sidebar_active') 
+@hasSection('sidebar_active')
     @php
         $sidebar_active = app()->view->getSections()['sidebar_active'];
     @endphp

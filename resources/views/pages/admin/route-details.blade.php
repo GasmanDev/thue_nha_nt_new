@@ -3,8 +3,27 @@
 @section('template_title')
 	Routing Information
 @endsection
+@section('sidebar_active', 'users')
 
 @section('content')
+<div class="section-banner">
+    <!-- SECTION BANNER ICON -->
+
+    <img class="section-banner-icon" src="{{ asset('dashboard/img/banner/streams-icon.png') }}" alt="php-info">
+
+    <!-- /SECTION BANNER ICON -->
+
+    <!-- SECTION BANNER TITLE -->
+    <p class="section-banner-title">
+        Routing Information
+        <span class="badge badge-primary pull-right">{{ count($routes) }} routes</span>
+    </p>
+    <!-- /SECTION BANNER TITLE -->
+
+    <!-- SECTION BANNER TEXT -->
+    <p class="section-banner-text">Check out all the members streams!</p>
+    <!-- /SECTION BANNER TEXT -->
+</div>
 	<div class="w-100 my-5">
 		<div class="row">
 			<div class="col-md-12">
@@ -13,8 +32,7 @@
 
 				<div class="card">
 					<div class="card-header">
-						Routing Information
-						<span class="badge badge-primary pull-right">{{ count($routes) }} routes</span>
+
 					</div>
 					<div class="card-body">
 						<div class="table-responsive">
