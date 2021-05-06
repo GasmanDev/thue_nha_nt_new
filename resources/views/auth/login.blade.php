@@ -80,7 +80,7 @@
     <!-- /FORM BOX DECORATION -->
 
     <!-- FORM BOX TITLE -->
-    <h2 class="form-box-title">Account Login</h2>
+    <h2 class="form-box-title">{{ trans('auth.login') }} {{ trans('common.appName') }}</h2>
     <!-- /FORM BOX TITLE -->
     <!-- FORM -->
     <form class="form"  method="POST" action="{{ route('login') }}">
@@ -91,7 +91,7 @@
         <div class="form-item">
           <!-- FORM INPUT -->
           <div class="form-input">
-            <label for="login-username">Username or Email</label>
+            <label for="login-username">{{ trans('auth.ph_name') }}</label>
             <input type="text" id="login-username" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" required>
 
             @if ($errors->has('email'))
@@ -112,7 +112,7 @@
         <div class="form-item">
           <!-- FORM INPUT -->
           <div class="form-input">
-            <label for="login-password">Password</label>
+            <label for="login-password">{{ trans('auth.ph_password') }}</label>
             <input id="login-password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
             @if ($errors->has('password'))
@@ -234,7 +234,7 @@
     <!-- /FORM BOX DECORATION -->
 
     <!-- FORM BOX TITLE -->
-    <h2 class="form-box-title">Create your Account!</h2>
+    <h2 class="form-box-title">{{ trans('auth.register') }} {{ trans('common.appName') }}</h2>
     <!-- /FORM BOX TITLE -->
     <!-- FORM -->
     <form class="form" method="POST" action="{{ route('register') }}">
@@ -245,7 +245,7 @@
         <div class="form-item">
           <!-- FORM INPUT -->
           <div class="form-input">
-            <label for="register-email">Your Email</label>
+            <label for="register-email">{{ trans('auth.ph_email') }}</label>
             <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
@@ -265,7 +265,7 @@
         <div class="form-item">
           <!-- FORM INPUT -->
           <div class="form-input">
-            <label for="register-username">User name</label>
+            <label for="register-username">{{ trans('auth.ph_name') }}</label>
             <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required>
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
@@ -321,7 +321,7 @@
         <div class="form-item">
           <!-- FORM INPUT -->
           <div class="form-input">
-            <label for="register-password">Password</label>
+            <label for="register-password">{{ trans('auth.ph_password') }}</label>
             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
             @if ($errors->has('password'))
@@ -342,7 +342,7 @@
         <div class="form-item">
           <!-- FORM INPUT -->
           <div class="form-input">
-            <label for="register-password-repeat">Repeat Password</label>
+            <label for="register-password-repeat">{{ trans('auth.ph_password_conf') }}</label>
             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
           </div>
           <!-- /FORM INPUT -->
@@ -404,7 +404,7 @@
     <!-- /FORM -->
 
     <!-- FORM TEXT -->
-    <p class="form-text">Copyright 2021 <a href="#">Go Home</a></p>
+    <p class="form-text">Copyright 2021 <a href="#">{{ trans('common.appName') }}</a></p>
     <!-- /FORM TEXT -->
 </div>
 @endsection

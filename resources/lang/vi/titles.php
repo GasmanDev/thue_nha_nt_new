@@ -2,8 +2,8 @@
 
 return [
 
-    'app'               => 'Laravel',
-    'app2'              => 'Auth :version',
+    'app'               => 'Go Home',
+    'app2'              => 'Go Home :version',
     'home'              => 'Home',
     'login'             => 'Login',
     'logout'            => 'Logout',
@@ -37,5 +37,5 @@ return [
 
     'laravelroles'      => 'Roles Administration',
 
-    'manage'            => 'Manage',
+    'manage'            => 'Quản lý',
 ];

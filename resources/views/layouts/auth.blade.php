@@ -40,7 +40,7 @@
         <!-- /LANDING INFO PRETITLE -->
 
         <!-- LANDING INFO TITLE -->
-        <h1 class="landing-info-title">Go Home</h1>
+        <h1 class="landing-info-title">{{ trans('common.appName') }}</h1>
         <!-- /LANDING INFO TITLE -->
 
         <!-- LANDING INFO TEXT -->

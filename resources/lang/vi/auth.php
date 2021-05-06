@@ -37,21 +37,22 @@ return [
     'password'        => 'Password',
     'rememberMe'      => ' Remember Me',
     'login'           => 'Đăng nhập',
-    'forgot'          => 'Forgot Your Password?',
+    'forgot'          => 'Quên mật khẩu?',
     'forgot_message'  => 'Password Troubles?',
     'name'            => 'Username',
     'first_name'      => 'First Name',
     'last_name'       => 'Last Name',
     'confirmPassword' => 'Confirm Password',
-    'register'        => 'Register',
+    'register'        => 'Đăng ký',
+    'loginOrRegister' => 'Đăng nhập or Đăng ký',
 
     // Placeholders
-    'ph_name'          => 'Username',
-    'ph_email'         => 'E-mail Address',
+    'ph_name'          => 'Tài khoản',
+    'ph_email'         => 'Địa chỉ Email',
     'ph_firstname'     => 'First Name',
     'ph_lastname'      => 'Last Name',
-    'ph_password'      => 'Password',
-    'ph_password_conf' => 'Confirm Password',
+    'ph_password'      => 'Mật khẩu',
+    'ph_password_conf' => 'Xác nhận mật khẩu',
 
     // User flash messages
     'sendResetLink' => 'Send Password Reset Link',

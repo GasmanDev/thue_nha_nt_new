@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'hi'                => 'Hi',
-    'myProfile'         => 'My Profile',
-    'home'              => 'Home',
-    'loading'           => 'Loading...',
+    'appName'           => 'Go Home',
+    'hi'                => 'Chào',
+    'home'              => 'Trang chủ',
+    'landingInfo'       => 'Trang hệ thống tìm nhà hàng đầu tại Nha Trang!',
+    'loading'           => 'Đang tải...',
+    'myProfile'         => 'Hồ sơ của tôi',
     'sections'          => 'Sections',
-    'welcomeTo'         => 'Welcome to',
-    'landingInfo'       => 'The next generation social network &amp; community! Connect with your friends
-    and play with our quests and badges gamification system!'   
+    'welcomeTo'         => 'Chào mừng bạn đến với'
 ];
