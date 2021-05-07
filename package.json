@@ -2,6 +2,7 @@
     "private": true,
     "scripts": {
         "style": "sass resources/assets/dashboard/sass/main.scss public/dashboard/css/styles.min.css --style compressed",
+        "style:re": "sass resources/assets/real-estate/scss/main.scss public/real-estate/css/style.css --style compressed",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",

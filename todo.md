@@ -1,6 +1,7 @@
 # BE
 - Register auto Verify [DONE]
 - Remove First name, last name in register [DONE]
+- Test all error on dashboard
 - Working on dashboard
 - Generate Database 
 - Generate CRUD 

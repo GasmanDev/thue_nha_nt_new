@@ -41,6 +41,10 @@
     @php
         $sidebar_active = app()->view->getSections()['sidebar_active'];
     @endphp
+@else
+    @php
+        $sidebar_active = '';
+    @endphp
 @endif
 @include('partials.side-bar', ['sidebar_active' => $sidebar_active])
 <!-- /SIDE BAR -->
@@ -48,9 +52,9 @@
 {{-- Scripts --}}
 {{-- <script src="{{ mix('/js/app.js') }}"></script> --}}
 
-@if (config('settings.googleMapsAPIStatus'))
+{{-- @if (config('settings.googleMapsAPIStatus'))
     {!! HTML::script('//maps.googleapis.com/maps/api/js?key=' . config('settings.googleMapsAPIKey') . '&libraries=places&dummy=.js', ['type' => 'text/javascript']) !!}
-@endif
+@endif --}}
 
 @yield('footer_scripts')
 <!-- /CONTENT GRID -->
@@ -59,11 +63,11 @@
 <script src="{{ asset('dashboard/js/vendor/simplebar.min.js') }}"></script>
 <script src="{{ asset('dashboard/js/utils/liquidify.js') }}"></script>
 <script src="{{ asset('dashboard/js/vendor/xm_plugins.min.js') }}"></script>
-<script src="{{ asset('dashboard/js/vendor/Chart.bundle.min.js') }}"></script>
-<script src="{{ asset('dashboard/js/global/global.hexagons.js') }}"></script>
+{{-- <script src="{{ asset('dashboard/js/vendor/Chart.bundle.min.js') }}"></script> --}}
+{{-- <script src="{{ asset('dashboard/js/global/global.hexagons.js') }}"></script> --}}
 <script src="{{ asset('dashboard/js/global/global.tooltips.js') }}"></script>
 <script src="{{ asset('dashboard/js/global/global.accordions.js') }}"></script>
-<script src="{{ asset('dashboard/js/global/global.charts.js') }}"></script>
+{{-- <script src="{{ asset('dashboard/js/global/global.charts.js') }}"></script> --}}
 <script src="{{ asset('dashboard/js/header/header.js') }}"></script>
 <script src="{{ asset('dashboard/js/sidebar/sidebar.js') }}"></script>
 <script src="{{ asset('dashboard/js/content/content.js') }}"></script>

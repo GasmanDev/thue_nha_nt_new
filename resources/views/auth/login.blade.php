@@ -151,14 +151,14 @@
         <!-- /FORM ITEM -->
 
         <!-- FORM ITEM -->
-        <div class="form-item">
+        {{-- <div class="form-item">
           <!-- FORM LINK -->
           <a class="form-link" href="{{ route('password.request') }}">
             {{ __('auth.forgot') }}
          </a>
 
           <!-- /FORM LINK -->
-        </div>
+        </div> --}}
         <!-- /FORM ITEM -->
       </div>
       <!-- /FORM ROW -->
