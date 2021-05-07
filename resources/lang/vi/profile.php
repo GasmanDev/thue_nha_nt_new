@@ -20,31 +20,31 @@ return [
     'noProfileYet'        => 'No profile yet.',
 
     // USER profile title
-    'showProfileUsername'        => 'Username',
-    'showProfileFirstName'       => 'First Name',
-    'showProfileLastName'        => 'Last Name',
-    'showProfileEmail'           => 'E-mail Address',
-    'showProfileLocation'        => 'Location',
-    'showProfileBio'             => 'Bio',
-    'showProfileTheme'           => 'Theme',
-    'showProfileTwitterUsername' => 'Twitter Username',
-    'showProfileGitHubUsername'  => 'Github Username',
+    'showProfileUsername'        => 'Tên tài khoản',
+    'showProfileFirstName'       => 'Họ',
+    'showProfileLastName'        => 'Tên',
+    'showProfileEmail'           => 'Địa chỉ email',
+    'showProfileLocation'        => 'Vị trí',
+    'showProfileBio'             => 'Tiểu sử',
+    'showProfileTheme'           => 'Chủ đề',
+    'showProfileTwitterUsername' => 'Tài khoản Twitter',
+   // 'showProfileGitHubUsername'  => 'Github Username',
 
     // USER profile page
     'showProfileTitle' => ':username\'s Profile',
 
     // USER EDIT profile page
-    'editProfileTitle' => 'Profile Settings',
+    'editProfileTitle' => 'Cài đặt cấu hình',
 
     // User edit profile form
-    'label-theme' => 'Your theme:',
-    'ph-theme'    => 'Select your theme',
+    'label-theme' => 'Chủ đề của bạn:',
+    'ph-theme'    => 'Chọn chủ đề của bạn',
 
-    'label-location' => 'Your location:',
-    'ph-location'    => 'Enter your location',
+    'label-location' => 'Vị trí của bạn:',
+    'ph-location'    => 'Nhập vị trí của bạn',
 
-    'label-bio' => 'Your bio:',
-    'ph-bio'    => 'Enter your bio',
+    'label-bio' => 'Tiểu sử của bạn:',
+    'ph-bio'    => 'Nhập tiểu sử của bạn',
 
     'label-github_username' => 'Your GitHub username:',
     'ph-github_username'    => 'Enter your GitHub username',
@@ -53,36 +53,36 @@ return [
     'ph-twitter_username'    => 'Enter your Twitter username',
 
     // User Account Settings Tab
-    'editTriggerAlt'        => 'Toggle User Menu',
-    'editAccountTitle'      => 'Account Settings',
-    'editAccountAdminTitle' => 'Account Administration',
-    'updateAccountSuccess'  => 'Your account has been successfully updated',
-    'submitProfileButton'   => 'Save Changes',
+    'editTriggerAlt'        => 'Chuyển đổi Menu Người dùng',
+    'editAccountTitle'      => 'Cài đặt tài khoản',
+    'editAccountAdminTitle' => 'Quản trị tài khoản',
+    'updateAccountSuccess'  => 'tài khoản của bạn đã được cập nhật thành công',
+    'submitProfileButton'   => 'Lưu thay đổi',
 
     // User Account Admin Tab
-    'submitPWButton'    => 'Update Password',
-    'changePwTitle'     => 'Change Password',
-    'changePwPill'      => 'Change Password',
-    'deleteAccountPill' => 'Delete Account',
-    'updatePWSuccess'   => 'Your password has been successfully updated',
+    'submitPWButton'    => 'Cập nhật mật khẩu',
+    'changePwTitle'     => 'Đổi mật khẩu',
+    'changePwPill'      => 'Đổi mật khẩu',
+    'deleteAccountPill' => 'Xóa tài khoản',
+    'updatePWSuccess'   => 'Mật khẩu của bạn đã được cập nhật thành công',
 
     // Delete Account Tab
-    'deleteAccountTitle'        => 'Delete Account',
-    'deleteAccountBtn'          => 'Delete My Account',
-    'deleteAccountBtnConfirm'   => 'Delete My Account',
-    'deleteAccountConfirmTitle' => 'Confirm Account Deletion',
-    'deleteAccountConfirmMsg'   => 'Are you sure you want to delete your account?',
-    'confirmDeleteRequired'     => 'Confirm Account Deletion is required',
+    'deleteAccountTitle'        => 'Xóa tài khoản',
+    'deleteAccountBtn'          => 'Xóa tài khoản',
+    'deleteAccountBtnConfirm'   => 'Xóa tài khoản',
+    'deleteAccountConfirmTitle' => 'Xác nhận xóa tài khoản',
+    'deleteAccountConfirmMsg'   => 'Bạn có chắc rằng bạn muốn xóa tài khoản của bạn?',
+    'confirmDeleteRequired'     => 'Xác nhận xóa tài khoản là bắt buộc',
 
-    'errorDeleteNotYour'        => 'You can only delete your own profile',
-    'successUserAccountDeleted' => 'Your account has been deleted',
+    'errorDeleteNotYour'        => 'Bạn chỉ có thể xóa hồ sơ của chính mình',
+    'successUserAccountDeleted' => 'Tài khoản của bạn đã bị xóa',
 
     // Messages
-    'updateSuccess' => 'Your profile has been successfully updated',
-    'submitButton'  => 'Save Changes',
+    'updateSuccess' => 'Hồ sơ của bạn đã được cập nhật thành công',
+    'submitButton'  => 'Lưu thay đổi',
 
     // Restore User Account
-    'errorRestoreUserTime' => 'Sorry, account cannot be restored',
-    'successUserRestore'   => 'Welcome back :username! Account Successfully Restored',
+    'errorRestoreUserTime' => 'Xin lỗi, không thể khôi phục tài khoản',
+    'successUserRestore'   => 'Chào mừng bạn trở lại :username! Tài khoản được khôi phục thành công',
 
 ];

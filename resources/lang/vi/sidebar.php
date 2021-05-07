@@ -2,7 +2,7 @@
 
 return [
 
-    'dashboard' => 'Dashboard',
-    'userManagement' => 'User Management'
+    'dashboard' => 'Bảng điều khiển',
+    'userManagement' => 'Quản lý người dùng'
 
 ];

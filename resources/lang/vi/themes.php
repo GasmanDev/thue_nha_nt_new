@@ -10,63 +10,63 @@ return [
     */
 
     // Messages
-    'createSuccess'     => 'Theme created! ',
-    'updateSuccess'     => 'Theme updated! ',
-    'deleteSuccess'     => 'Theme deleted! ',
-    'deleteSelfError'   => 'You cannot delete the default theme. ',
+    'createSuccess'     => 'Đã tạo chủ đề! ',
+    'updateSuccess'     => 'Đã cập nhật chủ đề!',
+    'deleteSuccess'     => 'Chủ đề đã bị xóa! ',
+    'deleteSelfError'   => 'Bạn không thể xóa chủ đề mặc định. ',
 
     // Shared
-    'statusLabel'       => 'Theme Status',
-    'statusEnabled'     => 'Enabled',
-    'statusDisabled'    => 'Disabled',
+    'statusLabel'       => 'Trạng thái chủ đề',
+    'statusEnabled'     => 'Đã bật',
+    'statusDisabled'    => 'Đã hủy',
 
-    'nameLabel'         => 'Theme Name *',
-    'namePlaceholder'   => 'Enter Theme Name',
+    'nameLabel'         => 'Tên chủ đề',
+    'namePlaceholder'   => 'Nhập tên chủ đề',
 
     'linkLabel'         => 'Theme CSS Link *',
     'linkPlaceholder'   => 'Enter CSS Link',
 
-    'notesLabel'        => 'Theme Notes',
-    'notesPlaceholder'  => 'Enter Theme Notes',
+    'notesLabel'        => 'Ghi chú chủ đề',
+    'notesPlaceholder'  => 'Nhập ghi chú chủ đề',
 
-    'themes'            => 'Themes',
+    'themes'            => 'Chủ đề',
 
     // Add Theme
-    'btnAddTheme'       => 'Add Theme',
+    'btnAddTheme'       => 'Thêm chủ đề',
 
     // Edit Theme
-    'editTitle'         => 'Editing Theme:',
-    'editSave'          => 'Save Theme Changes',
-    'themeTitle'        => 'Theme :name',
+    'editTitle'         => 'Chỉnh sửa chủ đề:',
+    'editSave'          => 'Lưu thay đổi chủ đề',
+    'themeTitle'        => 'Chủ đề :name',
 
     // Show Theme
-    'showHeadTitle'     => 'Theme',
-    'showTitle'         => 'Theme Information',
-    'showBackBtn'       => 'Back to Themes',
-    'showUsers'         => 'Theme Users',
-    'showStatus'        => 'Status',
+    'showHeadTitle'     => 'Chủ đề',
+    'showTitle'         => 'Thông tin chủ đề',
+    'showBackBtn'       => 'Quay lại chủ đề',
+    'showUsers'         => 'Người dùng chủ đề',
+    'showStatus'        => 'Trạng thái',
     'showLink'          => 'CSS Link',
-    'showNotes'         => 'Notes',
-    'showAdded'         => 'Added',
-    'showUpdated'       => 'Updated',
-    'confirmDeleteHdr'  => 'Delete Theme',
-    'confirmDelete'     => 'Are you sure you want to delete this theme?',
+    'showNotes'         => 'Ghi chú',
+    'showAdded'         => 'Thêm',
+    'showUpdated'       => 'Đã cập nhật',
+    'confirmDeleteHdr'  => 'Xóa chủ đề',
+    'confirmDelete'     => 'Bạn có chắc chắn muốn xóa chủ đề này không?',
 
     // Show Themes
-    'themesTitle'       => 'Showing All',
-    'themesStatus'      => 'Status',
-    'themesUsers'       => 'Users',
-    'themesName'        => 'Name',
+    'themesTitle'       => 'Hiển thị tất cả ',
+    'themesStatus'      => 'Trạng thái',
+    'themesUsers'       => 'Người dùng',
+    'themesName'        => 'Tên',
     'themesLink'        => 'CSS Link',
-    'themesActions'     => 'Actions',
-    'themesBtnShow'     => 'Show Theme',
-    'themesBtnEdit'     => 'Edit Theme',
+    'themesActions'     => 'Hành động',
+    'themesBtnShow'     => 'Hiển thị chủ đề',
+    'themesBtnEdit'     => 'Chỉnh sửa chủ đề',
     'themesBtnDelete'   => '',
     'themesBtnEdits'    => '',
 
     // Tooltips
-    'backToThemeTt'     => 'Back to Theme',
-    'backToThemesTt'    => 'Back to Themes',
+    'backToThemeTt'     => 'Quay lại chủ đề',
+    'backToThemesTt'    => 'Quay lại chủ đề',
 
     // Buttons
     'backToThemeBtn'    => 'Back  <span class="hidden-xs">to Theme</span>',

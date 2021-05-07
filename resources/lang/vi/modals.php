@@ -12,21 +12,21 @@ return [
     */
 
     // Default Save Modal;
-    'confirm_modal_title_text'    => 'Confirm Save',
-    'confirm_modal_title_std_msg' => 'Please confirm your request.',
+    'confirm_modal_title_text'    => 'Xác nhận Lưu',
+    'confirm_modal_title_std_msg' => 'Vui lòng xác nhận yêu cầu của bạn.',
 
     // Confirm Save Modal;
-    'confirm_modal_button_save_text'        => 'Save Changes',
+    'confirm_modal_button_save_text'        => 'Lưu thay đổi',
     'confirm_modal_button_save_icon'        => 'fa-save',
-    'confirm_modal_button_cancel_text'      => 'Cancel',
+    'confirm_modal_button_cancel_text'      => 'Huỷ bỏ',
     'confirm_modal_button_cancel_icon'      => 'fa-times',
-    'edit_user__modal_text_confirm_title'   => 'Confirm Save',
-    'edit_user__modal_text_confirm_message' => 'Please confirm your changes.',
+    'edit_user__modal_text_confirm_title'   => 'Xác nhận Lưu',
+    'edit_user__modal_text_confirm_message' => 'Vui lòng xác nhận các thay đổi của bạn.',
 
     // Form Modal
-    'form_modal_default_title'      => 'Confirm',
-    'form_modal_default_message'    => 'Please Confirm',
-    'form_modal_default_btn_cancel' => 'Cancel',
-    'form_modal_default_btn_submit' => 'Confirm Submit',
+    'form_modal_default_title'      => 'Xác nhận',
+    'form_modal_default_message'    => 'Vui lòng xác nhận',
+    'form_modal_default_btn_cancel' => 'Huỷ bỏ',
+    'form_modal_default_btn_submit' => 'Xác nhận Gửi',
 
 ];

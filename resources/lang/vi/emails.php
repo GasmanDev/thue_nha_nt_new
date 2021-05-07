@@ -14,17 +14,17 @@ return [
     */
 
     // Activate new user account email.
-    'activationSubject'  => 'Activation required',
-    'activationGreeting' => 'Welcome!',
-    'activationMessage'  => 'You need to activate your email before you can start using all of our services.',
-    'activationButton'   => 'Activate',
-    'activationThanks'   => 'Thank you for using our application!',
+    'activationSubject'  => 'Yêu cầu kích hoạt',
+    'activationGreeting' => 'Chào mừng!',
+    'activationMessage'  => 'Bạn cần kích hoạt email của mình trước khi có thể bắt đầu sử dụng tất cả các dịch vụ của chúng tôi.',
+    'activationButton'   => 'Kích hoạt',
+    'activationThanks'   => 'Cảm ơn bạn đã sử dụng ứng dụng của chúng tôi!',
 
     // Goobye email.
-    'goodbyeSubject'  => 'Sorry to see you go...',
-    'goodbyeGreeting' => 'Hello :username,',
-    'goodbyeMessage'  => 'We are very sorry to see you go. We wanted to let you know that your account has been deleted. Thank for the time we shared. You have '.config('settings.restoreUserCutoff').' days to restore your account.',
-    'goodbyeButton'   => 'Restore Account',
-    'goodbyeThanks'   => 'We hope to see you again!',
+    'goodbyeSubject'  => 'Xin lỗi để nhìn bạn ra đi...',
+    'goodbyeGreeting' => 'Xin chào :username,',
+    'goodbyeMessage'  => 'Chúng tôi rất tiếc khi thấy bạn ra đi. Chúng tôi muốn cho bạn biết rằng tài khoản của bạn đã bị xóa. Cảm ơn vì thời gian chúng tôi đã chia sẻ. Bạn có '.config('settings.restoreUserCutoff').' ngày để khôi phục tài khoản của bạn.',
+    'goodbyeButton'   => 'Khôi phục tài khoản',
+    'goodbyeThanks'   => 'Chúng tôi rất mong sẽ gặp lại bạn!',
 
 ];
