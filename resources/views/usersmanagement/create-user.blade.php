@@ -1,197 +1,188 @@
 @extends('layouts.dashboard')
 @section('sidebar_active', 'users')
-
 @section('template_title')
     {!! trans('usersmanagement.create-new-user') !!}
 @endsection
-
 
 @section('template_fastload_css')
 @endsection
 
 @section('content')
-    <div class="section-banner">
-        <!-- SECTION BANNER ICON -->
-        <img class="section-banner-icon" src="{{ asset('dashboard/img/banner/accounthub-icon.png') }}"
-            alt="accounthub-icon">
-        <!-- /SECTION BANNER ICON -->
 
-        <!-- SECTION BANNER TITLE -->
-        <p class="section-banner-title">Account Hub</p>
-        <!-- /SECTION BANNER TITLE -->
-
-        <!-- SECTION BANNER TEXT -->
-        <p class="section-banner-text">Profile info, messages, settings and much more!</p>
-        <!-- /SECTION BANNER TEXT -->
-    </div>
-    <div class="grid small-space">
-        <!-- GRID COLUMN -->
-        <div class="grid-column">
-          <!-- WIDGET BOX -->
-          <div class="widget-box">
-            <!-- WIDGET BOX TITLE -->
-            <p class="widget-box-title">Create New User</p>
-            <!-- /WIDGET BOX TITLE -->
-
-            <!-- WIDGET BOX CONTENT -->
-            <div class="widget-box-content">
-              <!-- FORM -->
-              <form class="form">
-                <!-- FORM ROW -->
-                <div class="form-row split">
-                    <!-- FORM ITEM -->
-                    <div class="form-item {{ $errors->has('email') ? ' has-error ' : '' }}">
-                      <!-- FORM INPUT -->
-                      <div class="form-input small">
-                        <label for="billing-email">Email</label>
-                        <input type="text" id="email" name="email">
-                        @if ($errors->has('email'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                          @endif
-                      </div>
-                      <!-- /FORM INPUT -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            {!! trans('usersmanagement.create-new-user') !!}
+                            <div class="pull-right">
+                                <a href="{{ route('users') }}" class="btn btn-light btn-sm float-right"
+                                    data-toggle="tooltip" data-placement="left"
+                                    title="{{ trans('usersmanagement.tooltips.back-users') }}">
+                                    <i class="fa fa-fw fa-reply-all" aria-hidden="true"></i>
+                                    {!! trans('usersmanagement.buttons.back-to-users') !!}
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- /FORM ITEM -->
 
-                    <!-- FORM ITEM -->
-                    <div class="form-item">
-                      <!-- FORM INPUT -->
-                      <div class="form-input small {{ $errors->has('name') ? ' has-error ' : '' }}">
-                        <label for="name">User Name</label>
-                        <input type="text" id="name" name="name">
-                        @if ($errors->has('name'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('name') }}</strong>
-                        </span>
-                        @endif
-                      </div>
-                      <!-- /FORM INPUT -->
-                    </div>
-                    <!-- /FORM ITEM -->
-                  </div>
-                  <!-- /FORM ROW -->
-                <div class="form-row split">
-                  <!-- FORM ITEM -->
-                  <div class="form-item {{ $errors->has('first_name') ? ' has-error ' : '' }}">
-                    <!-- FORM INPUT -->
-                    <div class="form-input small">
-                      <label for="first-name">First Name</label>
-                      <input type="text" id="first-name" name="first_name">
-                      @if ($errors->has('first_name'))
-                      <span class="help-block">
-                          <strong>{{ $errors->first('first_name') }}</strong>
-                      </span>
-                    @endif
-                    </div>
-                    <!-- /FORM INPUT -->
-                  </div>
-                  <!-- /FORM ITEM -->
+                    <div class="card-body">
+                        {!! Form::open(['route' => 'users.store', 'method' => 'POST', 'role' => 'form', 'class' => 'needs-validation']) !!}
 
-                  <!-- FORM ITEM -->
-                  <div class="form-item {{ $errors->has('last_name') ? ' has-error ' : '' }}">
-                    <!-- FORM INPUT -->
-                    <div class="form-input small">
-                      <label for="last_name">Last Name</label>
-                      <input type="text" id="last_name" name="last_name">
-                      @if ($errors->has('last_name'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('last_name') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                    <!-- /FORM INPUT -->
-                  </div>
-                  <!-- /FORM ITEM -->
-                </div>
-                <!-- /FORM ROW -->
-                <!-- FORM ROW -->
-                <div class="form-row">
-                  <!-- FORM ITEM -->
-                  <div class="form-item {{ $errors->has('role') ? ' has-error ' : '' }}">
-                    <!-- FORM SELECT -->
-                    <div class="form-select">
-                      <label for="role">Role</label>
-                      <select id="role" name="role">
-                        <option value="">{{ trans('forms.create_user_ph_role') }}</option>
-                                @if ($roles)
-                                    @foreach($roles as $role)
-                                        <option value="{{ $role->id }}">{{ $role->name }}</option>
-                                    @endforeach
+                        {!! csrf_field() !!}
+
+                        <div class="form-group has-feedback row {{ $errors->has('email') ? ' has-error ' : '' }}">
+                            {!! Form::label('email', trans('forms.create_user_label_email'), ['class' => 'col-md-3 control-label']) !!}
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    {!! Form::text('email', null, ['id' => 'email', 'class' => 'form-control', 'placeholder' => trans('forms.create_user_ph_email')]) !!}
+                                    <div class="input-group-append">
+                                        <label for="email" class="input-group-text">
+                                            <i class="fa fa-fw {{ trans('forms.create_user_icon_email') }}"
+                                                aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
                                 @endif
-                      </select>
-                      @if ($errors->has('role'))
-                      <span class="help-block">
-                          <strong>{{ $errors->first('role') }}</strong>
-                      </span>
-                    @endif
-                      <!-- FORM SELECT ICON -->
-                      <svg class="form-select-icon icon-small-arrow">
-                        <use xlink:href="#svg-small-arrow"></use>
-                      </svg>
-                      <!-- /FORM SELECT ICON -->
-                    </div>
-                    <!-- /FORM SELECT -->
-                  </div>
-                  <!-- /FORM ITEM -->
-                </div>
-                <div class="form-row">
-                    <!-- FORM ITEM -->
-                    <div class="form-item {{ $errors->has('password_confirmation') ? ' has-error ' : '' }}">
-                      <!-- FORM INPUT -->
-                      <div class="form-input small">
-                        <label for="password">Password</label>
-                        <input type="text" id="password_confirmation" name="password_confirmation">
-                        @if ($errors->has('password_confirmation'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('password_confirmation') }}</strong>
-                        </span>
-                      @endif
-                      </div>
-                      <!-- /FORM INPUT -->
-                    </div>
-                    <!-- /FORM ITEM -->
-                </div>
-                <div class="form-row">
-                    <!-- FORM ITEM -->
-                    <div class="form-item {{ $errors->has('first_name') ? ' has-error ' : '' }}">
-                      <!-- FORM INPUT -->
-                      <div class="form-input small">
-                        <label for="first-name">Confirm Password</label>
-                        <input type="text" id="first-name" name="first_name">
-                        @if ($errors->has('first_name'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('first_name') }}</strong>
-                        </span>
-                      @endif
-                      </div>
-                      <!-- /FORM INPUT -->
-                    </div>
-                    <!-- /FORM ITEM -->
-                </div>
-                <div class="form-row w-50 mx-auto">
-                    <!-- FORM ITEM -->
-                    <div class="form-item">
-                        <!-- BUTTON -->
-                        <button type="submit" class="button full primary">Create New User!</button>
-                        <!-- /BUTTON -->
-                    </div>
-                    <!-- /FORM ITEM -->
-                </div>
+                            </div>
+                        </div>
 
-                <!-- /FORM ROW -->
-              </form>
-              <!-- /FORM -->
+                        <div class="form-group has-feedback row {{ $errors->has('name') ? ' has-error ' : '' }}">
+                            {!! Form::label('name', trans('forms.create_user_label_username'), ['class' => 'col-md-3 control-label']) !!}
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    {!! Form::text('name', null, ['id' => 'name', 'class' => 'form-control', 'placeholder' => trans('forms.create_user_ph_username')]) !!}
+                                    <div class="input-group-append">
+                                        <label class="input-group-text" for="name">
+                                            <i class="fa fa-fw {{ trans('forms.create_user_icon_username') }}"
+                                                aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback row {{ $errors->has('first_name') ? ' has-error ' : '' }}">
+                            {!! Form::label('first_name', trans('forms.create_user_label_firstname'), ['class' => 'col-md-3 control-label']) !!}
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    {!! Form::text('first_name', null, ['id' => 'first_name', 'class' => 'form-control', 'placeholder' => trans('forms.create_user_ph_firstname')]) !!}
+                                    <div class="input-group-append">
+                                        <label class="input-group-text" for="first_name">
+                                            <i class="fa fa-fw {{ trans('forms.create_user_icon_firstname') }}"
+                                                aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                @if ($errors->has('first_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('first_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback row {{ $errors->has('last_name') ? ' has-error ' : '' }}">
+                            {!! Form::label('last_name', trans('forms.create_user_label_lastname'), ['class' => 'col-md-3 control-label']) !!}
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    {!! Form::text('last_name', null, ['id' => 'last_name', 'class' => 'form-control', 'placeholder' => trans('forms.create_user_ph_lastname')]) !!}
+                                    <div class="input-group-append">
+                                        <label class="input-group-text" for="last_name">
+                                            <i class="fa fa-fw {{ trans('forms.create_user_icon_lastname') }}"
+                                                aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                @if ($errors->has('last_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('last_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback row {{ $errors->has('role') ? ' has-error ' : '' }}">
+                            {!! Form::label('role', trans('forms.create_user_label_role'), ['class' => 'col-md-3 control-label']) !!}
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <select class="custom-select form-control" name="role" id="role">
+                                        <option value="">{{ trans('forms.create_user_ph_role') }}</option>
+                                        @if ($roles)
+                                            @foreach ($roles as $role)
+                                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                    <div class="input-group-append">
+                                        <label class="input-group-text" for="role">
+                                            <i class="{{ trans('forms.create_user_icon_role') }}" aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                @if ($errors->has('role'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('role') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback row {{ $errors->has('password') ? ' has-error ' : '' }}">
+                            {!! Form::label('password', trans('forms.create_user_label_password'), ['class' => 'col-md-3 control-label']) !!}
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    {!! Form::password('password', ['id' => 'password', 'class' => 'form-control ', 'placeholder' => trans('forms.create_user_ph_password')]) !!}
+                                    <div class="input-group-append">
+                                        <label class="input-group-text" for="password">
+                                            <i class="fa fa-fw {{ trans('forms.create_user_icon_password') }}"
+                                                aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div
+                            class="form-group has-feedback row {{ $errors->has('password_confirmation') ? ' has-error ' : '' }}">
+                            {!! Form::label('password_confirmation', trans('forms.create_user_label_pw_confirmation'), ['class' => 'col-md-3 control-label']) !!}
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    {!! Form::password('password_confirmation', ['id' => 'password_confirmation', 'class' => 'form-control', 'placeholder' => trans('forms.create_user_ph_pw_confirmation')]) !!}
+                                    <div class="input-group-append">
+                                        <label class="input-group-text" for="password_confirmation">
+                                            <i class="fa fa-fw {{ trans('forms.create_user_icon_pw_confirmation') }}"
+                                                aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                @if ($errors->has('password_confirmation'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        {!! Form::button(trans('forms.create_user_button_text'), ['class' => 'btn btn-success margin-bottom-1 mb-1 float-right', 'type' => 'submit']) !!}
+                        {!! Form::close() !!}
+                    </div>
+                </div>
             </div>
-            <!-- WIDGET BOX CONTENT -->
-          </div>
-          <!-- /WIDGET BOX -->
         </div>
-        <!-- /GRID COLUMN -->
-
-        <!-- GRID COLUMN -->
-        <!-- /GRID COLUMN -->
     </div>
 
 @endsection
